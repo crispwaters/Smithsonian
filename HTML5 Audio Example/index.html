@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Smithsonian HTML5 Audio Demo</title>
+</head>
+
+<body>
+<div id="video" class="video">
+	<video id="audio" style="display:none">
+	  <source src="assets/TouchScreen01-theme01.mp3" type="audio/mp3" />
+	</video>
+</div>
+<script type="text/javascript">
+a=document.getElementById("audio");
+function playAudio()
+{ 
+	a.controls=false;
+	a.autoplay=true;
+	a.load();
+}
+playAudio();
+</script>
+</body>
+</html>
