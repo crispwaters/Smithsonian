@@ -1,0 +1,228 @@
+.text-align-center {
+  text-align: center;
+}
+.text-align-right {
+  text-align: right;
+}
+
+.ui-footer .ui-title {white-space:normal;}
+
+.hideDiv {
+	visibility:hidden;
+	height:0px; 
+	overflow:hidden;
+}
+.hideUL {
+	visibility:hidden;
+	height:0px; 
+	overflow:hidden;
+	display: none;
+}
+
+/*
+*Below is magic css for allowing what is essentially horizontally grouped inputs in jQuery Mobile
+*----Horiz grouped inputs are not currently supported
+*/
+.inputList li input
+{
+	-webkit-appearance:none;
+}
+
+.inputList.listmenu
+{
+	margin:0 0 1em;
+}
+
+.inputList li div.ui-btn-inner
+{
+	background:none;
+	border-bottom-width:0;
+	border-left-width:0;
+	border-right-width:0;
+}
+
+.inputList label,.inputList .ui-fake-label
+{
+	margin:3px 0 0!important;
+}
+
+.inputList .ui-fake-label,.inputList .ui-fake-text
+{
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.inputList .ui-fake-label
+{
+	line-height:2.25em;
+	min-width:150px;
+	padding:0 .15em 0 1em;
+	width:50%;
+}
+
+.inputList .ui-fake-text
+{
+	font-size:.875em;
+}
+
+.inputList .ui-fake-text-block
+{
+	padding:1em;
+}
+
+.inputList input.ui-input-text,.inputList textarea.ui-input-text
+{
+	-moz-border-radius:0;
+	-moz-box-shadow:none;
+	-webkit-border-radius:0;
+	-webkit-box-shadow:none;
+	background:transparent;
+	border-radius:0;
+	border-width:0;
+	box-shadow:none;
+	margin-left:1%;
+	padding:.6em 0;
+	width:97%!important;
+}
+
+.inputList li .ui-select a,.inputList li .ui-select a .ui-btn-inner
+{
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	border-radius:0;
+}
+
+.inputList li:first-child .ui-select a,.inputList li:first-child .ui-select a .ui-btn-inner
+{
+	-moz-border-radius-topleft:1em;
+	-moz-border-radius-topright:1em;
+	-webkit-border-top-left-radius:1em;
+	-webkit-border-top-right-radius:1em;
+	border-top-left-radius:1em;
+	border-top-right-radius:1em;
+}
+
+.inputList li:last-child .ui-select a,.inputList li:last-child .ui-select a .ui-btn-inner
+{
+	-moz-border-radius-bottomleft:1em;
+	-moz-border-radius-bottomright:1em;
+	-webkit-border-bottom-left-radius:1em;
+	-webkit-border-bottom-right-radius:1em;
+	border-bottom-left-radius:1em;
+	border-bottom-right-radius:1em;
+}
+
+.inputList .stretch150 label
+{
+	width:150px;
+}
+
+.inputList .stretch150 input
+{
+	text-indent:155px;
+}
+
+.inputList textarea.ui-input-text
+{
+	padding:10px .6em 0;
+	text-indent:0;
+}
+
+.inputList .ui-li-divider:not(.input-divider),.inputList .ui-li-static,.inputList .ui-li-has-alt,.inputList .ui-link-inherit,.inputList .ui-btn-icon-notext .ui-btn-inner
+{
+	font-size:1em!important;
+	padding:0!important;
+}
+
+.inputList div.ui-li-static,.inputList li.ui-li-static
+{
+	font-size:1em!important;
+}
+
+.inputList .ui-select
+{
+	width:100%;
+}
+
+.inputList .inputListSplit .ui-select,.inputList .inputListSplit input
+{
+	width:86%!important;
+}
+
+.inputList .ui-select-noIcon .ui-icon
+{
+	display:none;
+}
+
+.inputList .ui-select-noText
+{
+	border:1px solid #CCC;
+	border-bottom-width:0;
+	border-right-width:0;
+	border-top-width:0;
+	height:37px;
+	position:absolute;
+	right:0;
+	top:0;
+	z-index:2;
+}
+
+.inputList .ui-select-noText .ui-select
+{
+	min-width:40px;
+}
+
+.inputList .ui-select-noText .ui-select .ui-btn
+{
+	-moz-border-radius:1em;
+	-webkit-border-radius:1em;
+	border:1px solid #CCC;
+	border-radius:1em;
+	height:28px;
+	margin:5px auto;
+}
+
+.inputList .ui-select-noText .ui-select .ui-btn .ui-btn-inner
+{
+	padding:4px 5px!important;
+}
+
+.inputList .inSelect .ui-btn
+{
+	border:0;
+	height:inherit;
+	margin:0;
+}
+
+.inputList .ui-li .ui-btn-inner a.ui-link-inherit,.inputList .ui-li-static.ui-li
+{
+	padding:0!important;
+}
+
+.inputList li:first-child .inSelect .ui-btn
+{
+	-moz-border-radius-topleft:.6em;
+	-moz-border-radius-topright:.6em;
+	-webkit-border-top-left-radius:.6em;
+	-webkit-border-top-right-radius:.6em;
+	border-top-left-radius:.6em;
+	border-top-right-radius:.6em;
+	font-size:.875em;
+}
+
+.inputList .inSelect,.inputList .ui-select
+{
+	height:37px;
+}
+
+.input-divider
+{
+	padding:.5em 0;
+}
+
+.ui-divider-text
+{
+	cursor:normal;
+	display:block;
+	text-align:center;
+}
