@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="js/marquee.js" type="text/javascript"></script>
+<title>Smithsonian LED Control</title>
+
+<script type="text/javascript">
+    <!--
+    $(function () {
+		$('div.ticker marquee').marquee();
+	});
+</script>
+<style>
+.video {
+	margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+<div class="ticker">
+	<marquee behavior="scroll" direction="left" scrollamount="1" width="350"><p>Welcome to the College of Design Smithsonian Demo!</p></marquee>
+	<marquee behavior="scroll" direction="left" scrollamount="2" width="350"><p>Welcome to the College of Design Smithsonian Demo!</p></marquee>
+</div>
+<div id="video" class="video">
+	<video id="vidcontent" width="96" height="128">
+	  <source src="assets/whoosh1sec.mov" type="video/mp4" />
+	</video>
+</div>
+<script type="text/javascript">
+a=document.getElementById("vidcontent");
+function playVideo()
+{ 
+	a.controls=false;
+	a.autoplay=true;
+	a.load();
+}
+playVideo();
+
+//add ajax timer script to check if there's a new message, get it and pull it down.
+</script>
+</body>
+</html>
