@@ -1,4 +1,4 @@
 $('input:button').click(function() {
-	$('#topbar1').toggle(1000);
-	$('#topbar2').toggle(1000);
+	$('#topbar1').fadeToggle(500);
+	$('#topbar2').fadeToggle(500);
 });

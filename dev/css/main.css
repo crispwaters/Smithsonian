@@ -15,8 +15,10 @@ body {
 	margin:0px;
 	width:520px;
 	padding:0px;
+	display:none;
 }
 h1 {
+	text-align:center;
 	margin:0px;
 	padding:0px;
 }
@@ -25,9 +27,15 @@ h1 {
 	margin:0px;
 	width:520px;
 	padding:0px;
+	display:none;
 }
 
 #nav {
 	position:absolute;
 	top:95px;
+}
+#button{
+	position:relative;
+	width:200px;
+	margin:auto;
 }
