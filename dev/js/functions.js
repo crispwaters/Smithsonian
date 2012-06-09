@@ -1,3 +1,6 @@
+var cur_div = "page1";
+var div_stack[];
+
 $('#start').click(function() {
 	start_click();
 });
