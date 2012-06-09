@@ -1,3 +1,4 @@
+init();
 $('.start').click(function() {
 	start_click();
 });
@@ -11,7 +12,7 @@ $('.back').click(function() {
 });
 
 function init(){
-	
+	$('#page1').fadeIn(500);
 }
 
 function start_click(){
