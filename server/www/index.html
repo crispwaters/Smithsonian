@@ -56,15 +56,12 @@ marquee {
 <marquee id="s4" behavior="scroll" scrollamount="1" direction="left"><p id="t4">welcome to the college of design smithsonian demo!</p></marquee>
 </div>
 <div id="video" class="video" style="margin-top:0px;margin-left:98px;">
-	<video id="vidcontent"><!--width="96" height="128">-->
+	<video id="vidcontent">
 	  <source src="assets/beammeupwhoosh_h264mp4.mp4" type="video/mp4" />
 	</video>
-	<!--<video id="vidcontent2" width="128" height="64">
-	  <source src="assets/beammeupwhoosh.mp4" type="video/mp4" />
-	  Unsupported for some reason
-	</video>-->
 </div>
 <script type="text/javascript">
+setInterval("newMsgCheck()",5000);
 $('#vidcontent').get(0).addEventListener('ended',vStart,false);
 var curMsg = "design transforms communities"
 
