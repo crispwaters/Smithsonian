@@ -1,5 +1,5 @@
 var cur_div;
-var div_stack = new Array;
+var div_stack;
 init();
 
 $('.start').click(function() {
@@ -14,12 +14,9 @@ $('.back').click(function() {
 	back_click();
 });
 
-$('.button').click(function() {
-    button_click();
-});
-
 function init(){
 	cur_div = '#page1';
+	div_stack = new Array;
 	$(cur_div).delay(500);
 	$(cur_div).fadeIn(500);
 }
@@ -46,7 +43,11 @@ function back_click(){
 
 }
 
-function button_click(){
-
+function button_click(nextPage){
+	div_stack.push(cur_div);
+	$(cur_div).fadeOut(500);
+	cur_div = nextPage;
+	$(cur_div).delay(500);
+	$(cur_div).fadeIn(500);
 }
 
