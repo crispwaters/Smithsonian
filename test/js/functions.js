@@ -20,22 +20,28 @@ $('.button').click(function() {
 
 function init(){
 	cur_div = '#page1';
+	$(cur_div).delay(500);
 	$(cur_div).fadeIn(500);
 }
 
 function start_click(){
+	$(cur_div).fadeOut(500);
 	init();
 }
 
 function next_click(){
 	div_stack.push(cur_div);
 	var temp = cur_div + 'Next';
-	cur_div = $(temp).value();
-	
+	$(cur_div).fadeOut(500);
+	cur_div = $(temp).val();
+	$(cur_div).delay(500);
+	$(cur_div).fadeIn(500);	
 }
 
 function back_click(){
+	$(cur_div).fadeOut(500);
 	cur_div = div_stack.pop();
+	$(cur_div).delay(500);
 	$(cur_div).fadeIn(500);
 
 }
