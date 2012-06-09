@@ -62,6 +62,9 @@ marquee {
 </div>
 <script type="text/javascript">
 setInterval("newMsgCheck()",5000);
+var timeoutS2;
+var timeoutS3;
+var timeoutS4;
 $('#vidcontent').get(0).addEventListener('ended',vStart,false);
 var curMsg = "design transforms communities"
 
@@ -117,9 +120,12 @@ function marqueeReset(data){
 		$('#t' + j).html(lData);
 	});
 	$('#s1').show().marquee();
-	setTimeout("$('#s2').show().marquee()",9040);
-	setTimeout("$('#s3').show().marquee()",18080);
-	setTimeout("$('#s4').show().marquee()",27120);
+	window.clearTimeout(timeoutS2);
+	window.clearTimeout(timeoutS3);
+	window.clearTimeout(timeoutS4);
+	timeoutS2 = setTimeout("$('#s2').show().marquee()",9040);
+	timeoutS3 = setTimeout("$('#s3').show().marquee()",18080);
+	timeoutS4 = setTimeout("$('#s4').show().marquee()",27120);
 }
 </script>
 </body>
