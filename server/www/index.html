@@ -66,6 +66,7 @@ marquee {
 	</video>-->
 </div>
 <script type="text/javascript">
+$('#vidcontent').get(0).addEventListener('ended',vStart,false);
 var curMsg = "welcome to the college of design smithsonian demo!"
 
 $('#s1').hide();
@@ -80,30 +81,36 @@ function playVideo()
 	a.load();
 }
 playVideo();
-
-$('#s1').show().marquee();
-setTimeout("$('#s2').show().marquee()",4844);
-setTimeout("$('#s3').show().marquee()",9688);
-setTimeout("$('#s4').show().marquee()",14532);
-setInterval("newMsgCheck()", 5000);
+function vStart(e) {
+        if(!e) { e = window.event; }
+	$('#s1').show().marquee();
+	setTimeout("$('#s2').show().marquee()",9688);
+	setTimeout("$('#s3').show().marquee()",19376);
+	setTimeout("$('#s4').show().marquee()",29064);
+	setInterval("newMsgCheck()", 5000);
+}
 function newMsgCheck(){
 	$.get(
     	"getmessage.yaws",
     	function(data) {
        		if (data.toLowerCase() != curMsg)
 			{
+				$('#vidcontent').get(0).addEventListener('ended',vUpdate,false);
 				$('#vidcontent').get(0).play();
-				var lData = data.toLowerCase();
-				curMsg = lData;
-				var dif = 150 - lData.length;
-				for (i = 0; i < dif; i++)
-				{
-					lData += "&nbsp;";
+				function vUpdate(e) {
+					if(!e) { e = window.event; }
+					var lData = data.toLowerCase();
+					curMsg = lData;
+					var dif = 150 - lData.length;
+					for (i = 0; i < dif; i++)
+					{
+						lData += "&nbsp;";
+					}
+					$('#t1').html(lData);
+					$('#t2').html(lData);
+					$('#t3').html(lData);
+					$('#t4').html(lData);
 				}
-				$('#t1').html(lData);
-				$('#t2').html(lData);
-				$('#t3').html(lData);
-				$('#t4').html(lData);
 			}
     	}
 	);
