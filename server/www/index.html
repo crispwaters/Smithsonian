@@ -7,6 +7,12 @@
 <script src="js/marquee.js" type="text/javascript"></script>
 <title>Smithsonian LED Control</title>
 <style>
+@font-face {
+font-family: 'ArialMonospacedMT';
+src: url('assets/arial-monospaced-mt.eot'); /* IE9 Compat Modes */
+src: url('assets/arial-monospaced-mt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	 url('assets/arial-monospaced-mt.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
 .video {
 	margin-top:10px;
 }
@@ -18,7 +24,7 @@ p {
 	padding-bottom:2px;
 	height: 14px;
 	font-size:14px;
-	font-family:Arial,Helvetica,sans-serif;
+	font-family:ArialMonospacedMT, Fallback, sans-serif;
 }
 marquee {
 	padding: 0px;
@@ -39,16 +45,16 @@ marquee {
 
 <body>
 <div class="ticker">
-<marquee id="s1" behavior="scroll" scrollamount="2" direction="left"><p id="t1">Welcome to the College of Design Smithsonian Demo!</p></marquee>
+<marquee id="s1" behavior="scroll" scrollamount="2" direction="left"><p id="t1">welcome to the college of design smithsonian demo!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></marquee>
 </div>
 <div class="ticker">
-<marquee id="s2" behavior="scroll" scrollamount="2" direction="left"><p id="t2">Welcome to the College of Design Smithsonian Demo!</p></marquee>
+<marquee id="s2" behavior="scroll" scrollamount="2" direction="left"><p id="t2">welcome to the college of design smithsonian demo!</p></marquee>
 </div>
 <div class="ticker">
-<marquee id="s3" behavior="scroll" scrollamount="2" direction="left"><p id="t3">Welcome to the College of Design Smithsonian Demo!</p></marquee>
+<marquee id="s3" behavior="scroll" scrollamount="2" direction="left"><p id="t3">welcome to the college of design smithsonian demo!</p></marquee>
 </div>
 <div class="ticker">
-<marquee id="s4" behavior="scroll" scrollamount="2" direction="left"><p id="t4">Welcome to the College of Design Smithsonian Demo!</p></marquee>
+<marquee id="s4" behavior="scroll" scrollamount="2" direction="left"><p id="t4">welcome to the college of design smithsonian demo!</p></marquee>
 </div>
 <div id="video" class="video" style="margin-top:0px">
 	<video id="vidcontent"><!--width="96" height="128">-->
@@ -74,9 +80,9 @@ function playVideo()
 playVideo();
 
 $('#s1').show().marquee();
-setTimeout("$('#s2').show().marquee()",3000);
-setTimeout("$('#s3').show().marquee()",6000);
-setTimeout("$('#s4').show().marquee()",9000);
+setTimeout("$('#s2').show().marquee()",5000);
+setTimeout("$('#s3').show().marquee()",10000);
+setTimeout("$('#s4').show().marquee()",15000);
 
 //add ajax timer script to check if there's a new message, get it and pull it down.
 </script>
