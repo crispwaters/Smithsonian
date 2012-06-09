@@ -88,7 +88,7 @@
             newMarquee = newMarqueeList;
             
             if (newMarquee.length) {
-                setTimeout(animateMarquee, 25);
+                setTimeout(animateMarquee, 40);
             }            
         }
         
