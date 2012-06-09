@@ -1,14 +1,18 @@
-$('#start').click(function() {
+$('.start').click(function() {
 	start_click();
 });
 
-$('#next').click(function() {
+$('.next').click(function() {
 	next_click();
 });
 
-$('#back').click(function() {
+$('.back').click(function() {
 	back_click();
 });
+
+function init(){
+	
+}
 
 function start_click(){
 	alert("start clicked");
@@ -16,8 +20,11 @@ function start_click(){
 
 function next_click(){
 	alert("next clicked");
+	
 }
 
 function back_click(){
 	alert("back clicked");
+	
 }
+
