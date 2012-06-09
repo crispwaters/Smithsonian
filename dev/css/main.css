@@ -18,6 +18,9 @@ time, mark, audio, video {
 html {
 	background:#000;
 	overflow:none;
+	-webkit-user-select: none;
+/*	cursor:none;
+*/
 }
 body {
 	font:30px FrutigerLTStd-Black;
@@ -42,7 +45,7 @@ a:link {
 	height:100%;
 	display:none;
 }
-#page3 {
+#page3,#page5 {
 	background:url('../imgs/lines.png') no-repeat;
 	background-position:center;
 }
@@ -51,7 +54,7 @@ a:link {
 	top:0px;
 	left:0px;
 	width:100%;
-	background: #ff0000;
+	background: #e51f25;
 }
 .topBar2 {
 	position:absolute;
@@ -73,8 +76,9 @@ a:link {
 	bottom:300px;
 	height:200px;
 	width:400px;
-	padding:60px 0 0 0;
+	padding:50px 0 0 0;
 	text-align:center;
+	font-size:35px;
 	border-radius:50%;
 }
 #startGreen {
@@ -128,27 +132,44 @@ a:link {
 	left:300px;
 	bottom:450px;
 }
+#page5 #option1 {
+	background:#e51f25;
+}
 #option2 {
 	left:530px;
 	bottom:720px;
+}
+#page5 #option2 {
+	background:#0eabe0;
 }
 #option3 {
 	right:570px;
 	bottom:720px;
 }
+#page5 #option3 {
+	background:#52ae42;
+}
 #option4 {
 	right:300px;
 	bottom:450px;
+}
+#page5 #option4 {
+	background:#f89c3e;
 }
 #option5 {
 	right:570px;
 	bottom:220px;
 }
+#page5 #option5 {
+	background:#8f53a2;
+}
 #option6 {
 	left:520px;
 	bottom:220px;
 }
-	
+#page5 #option6 {
+	background:#fec13f;
+}	
 
 /******************************Navigation******************************/
 .start {
