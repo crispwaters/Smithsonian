@@ -185,15 +185,6 @@ a:link {
 #page5 #option6 {
 	background:#fec13f;
 }	
-.option {
-	position:absolute;
-	width:100px;
-	height:40px;
-	text-align:center;
-	padding-top:30px;
-	border-radius:50%;
-	background:#777;
-}
 
 /******************************Navigation******************************/
 .start {
