@@ -66,7 +66,7 @@
 				var toSend = 'message="' + $('#idea').val() + '"';
 				$.ajax({
 					type: "POST",
-					url: "ec2-23-22-71-150.compute-1.amazonaws.com/postmessage.yaws",
+					url: "postmessage.yaws",
 					data: toSend,
 					success: function(response) { 
 						doAlert("Successfully Submitted", "greenGradient", "shield_check");
