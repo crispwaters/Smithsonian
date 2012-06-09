@@ -12,8 +12,21 @@
 		
 		<!--Ajax.js-->
 		<script src="js/ajax.js"></script>
-		
 		<script type="text/javascript">
+		
+		$(document).ready(function() {
+			$('textarea[maxlength]').keyup(function(){
+				//get the limit from maxlength attribute
+				var limit = parseInt($(this).attr('maxlength'));
+				//get the current text inside the textarea
+				var text = $(this).val();
+				//count the number of characters in the text
+				var chars = text.length;
+				//update the text
+				var rem = limit - chars;
+				$('#charrem').text("Characters remaining: " + rem);
+			});
+		});
 			var currScrollPos = $(window).scrollTop();
 			function doAlert(messagetodisplay, barColor, icon)
 			{
@@ -71,6 +84,7 @@
 					success: function(response) { 
 						doAlert("Successfully Submitted", "greenGradient", "shield_check");
 						$('#idea').val("");
+						$('#charrem').text("Characters remaining: " + $('#idea').attr('maxlength'));
 					},
 					error: function(msg) {
 						doAlert("Submission error occurred: " + msg, "redGradient", "alert");
@@ -137,6 +151,7 @@
 					<div data-role="fieldcontain">
 					<textarea cols="40" rows="15" maxlength="150" name="idea" id="idea"></textarea>
 					</div>
+					<h4 id="charrem">Characters remaining: 150</h4>
 					<button href="#" data-icon="plus" data-theme="b" data-inline="true" onclick="submitIdea()">Submit Idea</button>
 				</form>
             </div>
