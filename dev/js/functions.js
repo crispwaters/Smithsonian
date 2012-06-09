@@ -20,11 +20,11 @@ function init(){
 }
 
 function start_click(){
-	alert("start clicked");
+	init();
 }
 
 function next_click(){
-	alert("next clicked");
+	div_stack.push(cur_div);
 	
 }
 
