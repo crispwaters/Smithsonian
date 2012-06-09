@@ -98,12 +98,12 @@ function newMsgCheck(){
 				var dif = 150 - lData.length;
 				for (i = 0; i < dif; i++)
 				{
-					lData += " ";
+					lData += "&nbsp;";
 				}
-				$('#t1').text(lData);
-				$('#t2').text(lData);
-				$('#t3').text(lData);
-				$('#t4').text(lData);
+				$('#t1').html(lData);
+				$('#t2').html(lData);
+				$('#t3').html(lData);
+				$('#t4').html(lData);
 			}
     	}
 	);
