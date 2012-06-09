@@ -19,10 +19,8 @@
 		<!--End Header-------------------------------------------->
 
 		<!--Content-------------------------------------------->
-		<div id="startButtonHead"><h1>pick a topic to start</h1></div>
-		<div id="startGreen"><div class="middleText">how can we<br />increase<br />tourism?</div></div>
-		<div id="startYellow"><div class="middleText">how can we<br />improve the</br>lives of seniors?</div></div>
 		<!--End Content-------------------------------------------->
+		<input type="hidden" id="page1Next" value="#page2" />
 	</div>
 		
 	<!------------------------------------------------------------PAGE 2 - DONE------------------------------------------------------------>
@@ -37,15 +35,12 @@
 		<!--End Header-------------------------------------------->
 
 		<!--Content-------------------------------------------->
-		<div id="centerInfoYellow"><h1>Designers<br />ask a lot<br />of questions</h1></div>
+		<div id="centerInfoYellow" class="info2"><h1>Designers<br />ask a lot<br />of questions</h1></div>
 		<!--End Content-------------------------------------------->
-
-		<div class="start"><img src="imgs/start.png" /></div>
-		<div class="back"><img src="imgs/back.png" /></div>
-		<div class="next"><img src="imgs/next.png" /></div>
+		<input type="hidden" id="page2Next" value="#page3" />
 	</div>
 		
-	<!------------------------------------------------------------PAGE 3------------------------------------------------------------>
+	<!------------------------------------------------------------PAGE 3 - DONE------------------------------------------------------------>
 	<div id="page3">
 		<!--Header------------------------------------------------>
 		<div class="topBar1">
@@ -65,12 +60,28 @@
 		<div class="option" id="option5">when?</div>
 		<div class="option" id="option6">where?</div>
 		<!--End Content-------------------------------------------->
-
-		<div class="start"><img src="imgs/start.png" /></div>
-		<div class="back"><img src="imgs/back.png" /></div>
-		<div class="next"><img src="imgs/next.png" /></div>
+		<input type="hidden" id="page3Next" value="#page4" />
 	</div>
 		
+	<!------------------------------------------------------------PAGE 4------------------------------------------------------------>
+	<div id="page4">
+		<!--Header------------------------------------------------>
+		<div class="topBar1">
+			<h1>how can we increase tourism</h1>
+		</div>
+		<!--End Header-------------------------------------------->
+
+		<!--Content-------------------------------------------->
+		<div id="centerInfoYellow" class="info4"><h1>Designers<br />take the<br />problem apart.<br />Let's try that!</h1></div>
+		<!--End Content-------------------------------------------->
+		<input type="hidden" id="page4Next" value="#page5" />
+	</div>
+		
+	<!------------------------------------------------------------NAVIGATION BUTTONS------------------------------------------------------------>
+	<div class="start"><img src="imgs/start.png" /></div>
+	<div class="back"><img src="imgs/back.png" /></div>
+	<div class="next"><img src="imgs/next.png" /></div>
+
 	</body>
 	<!--Javascripts--------------------------------------------------->
 	<script type="text/javascript" src="js/jquery.js"></script>
