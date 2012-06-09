@@ -15,7 +15,7 @@ $('.back').click(function() {
 });
 
 function init(){
-	var cur_div = '#page3';
+	var cur_div = '#page4';
 	$(cur_div).fadeIn(500);
 }
 
