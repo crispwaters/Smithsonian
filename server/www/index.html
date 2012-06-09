@@ -45,7 +45,7 @@ marquee {
 
 <body>
 <div class="ticker">
-<marquee id="s1" behavior="scroll" scrollamount="2" direction="left"><p id="t1">welcome to the college of design smithsonian demo!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></marquee>
+<marquee id="s1" behavior="scroll" scrollamount="2" direction="left"><p id="t1">welcome to the college of design smithsonian demo!</p></marquee>
 </div>
 <div class="ticker">
 <marquee id="s2" behavior="scroll" scrollamount="2" direction="left"><p id="t2">welcome to the college of design smithsonian demo!</p></marquee>
@@ -66,6 +66,8 @@ marquee {
 	</video>-->
 </div>
 <script type="text/javascript">
+var curMsg = "welcome to the college of design smithsonian demo!"
+
 $('#s1').hide();
 $('#s2').hide();
 $('#s3').hide();
@@ -83,8 +85,29 @@ $('#s1').show().marquee();
 setTimeout("$('#s2').show().marquee()",5000);
 setTimeout("$('#s3').show().marquee()",10000);
 setTimeout("$('#s4').show().marquee()",15000);
-
-//add ajax timer script to check if there's a new message, get it and pull it down.
+setInterval("newMsgCheck()", 5000);
+function newMsgCheck(){
+	$.get(
+    	"getmessage.yaws",
+    	function(data) {
+       		if (data.toLowerCase() != curMsg)
+			{
+				$('#vidcontent').get(0).play();
+				var lData = data.toLowerCase();
+				curMsg = lData;
+				var dif = 150 - lData.length;
+				for (i = 0; i < dif; i++)
+				{
+					lData += "&nbsp";
+				}
+				$('#t1').text("lData");
+				$('#t2').text("lData");
+				$('#t3').text("lData");
+				$('#t4').text("lData");
+			}
+    	}
+	);
+}
 </script>
 </body>
 </html>
