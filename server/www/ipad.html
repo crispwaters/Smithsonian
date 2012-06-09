@@ -84,7 +84,7 @@
 					success: function(response) { 
 						doAlert("Successfully Submitted", "greenGradient", "shield_check");
 						$('#idea').val("");
-						$('#charrem').text("Characters remaining: " + .$('#idea').attr('maxlength'));
+						$('#charrem').text("Characters remaining: " + $('#idea').attr('maxlength'));
 					},
 					error: function(msg) {
 						doAlert("Submission error occurred: " + msg, "redGradient", "alert");
