@@ -39,7 +39,7 @@ handle_cast({post_message, Message}, Queue) ->
     Empty = queue:is_empty(Queue),
     if
 	Empty ->
-	    {ok, TRef} = timer:apply_interval(40000, queueserver, dequeue, []),
+	    {ok, TRef} = timer:apply_interval(46000, queueserver, dequeue, []),
 	    put(timer, TRef);
 	true ->
 	    ok
