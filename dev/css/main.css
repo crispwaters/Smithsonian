@@ -1,16 +1,31 @@
+/******************************CSS RESET******************************/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i, dl, dt, dd, ol, ul, li, a,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+}
+
 html {
 	background:#000;
 	overflow:none;
 }
+body {
+	font:30px Arial Black;
+}
 h1 {
-	font:60px Arial Black;
+	font-size:50px;
 	color:#fff;
 	text-align:center;
-	margin:0px;
-	padding:0px;
-}
-img {
-	border:0px;
 }
 a:link {
 	border:0px;
@@ -22,8 +37,6 @@ a:link {
 	position:absolute;
 	top:0px;
 	left:0px;
-	margin:0px;
-	padding:0px;
 	width:100%;
 	height:100%;
 	display:none;
@@ -32,18 +45,40 @@ a:link {
 	position:absolute;
 	top:0px;
 	left:0px;
-	margin:0px;
-	padding:0px;
 	width:100%;
 	background: #ff0000;
 }
 .topBar2 {
 	position:absolute;
-	top:85px;
+	top:70px;
 	left:0px;
-	margin:0px;
-	padding:0px;
 	width:100%;
+}
+
+/******************************startGreen/startYellow******************************/
+#startButtonHead {
+	position:absolute;
+	width:100%;
+	text-align:center;
+	left:0px;
+	bottom:600px;
+}
+#startGreen,#startYellow {
+	position:absolute;
+	bottom:300px;
+	height:200px;
+	width:400px;
+	padding:60px 0 0 0;
+	text-align:center;
+	border-radius:50%;
+}
+#startGreen {
+	left:400px;
+	background:#31b44b;
+}
+#startYellow {
+	right:400px;
+	background:#faed3c;
 }
 
 /******************************Navigation******************************/
