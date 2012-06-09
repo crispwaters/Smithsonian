@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 init();
-=======
 var cur_div = "page1";
 var div_stack[];
 
->>>>>>> 5f40969634cffde20180a80522afa306934b9975
 $('.start').click(function() {
 	start_click();
 });
