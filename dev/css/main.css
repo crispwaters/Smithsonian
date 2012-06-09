@@ -13,11 +13,12 @@ time, mark, audio, video {
     margin:0;
     padding:0;
     border:0;
+	-webkit-user-drag: none;
 }
 
 html {
 	background:#000;
-	overflow:none;
+	overflow:hidden;
 	-webkit-user-select: none;
 /*	cursor:none;
 */
@@ -36,8 +37,7 @@ a:link {
 
 /******************************Header******************************/
 #page1,#page2,#page3,#page4,#page5,#page6,#page7,#page8,#page9,
-#page10,#page11,#page12,#page13,#page14,#page15,#page16,#page17,#page18,#page19,
-#page20,#page21,#page22,#page23,#page24,#page25,#page26,#page27,#page28,#page29#page30 {
+#page10,#page11,#page12,#page13,#page14,#page15,#page16,#page17,#page18,#page19 {
 	position:absolute;
 	top:0px;
 	left:0px;
@@ -45,7 +45,7 @@ a:link {
 	height:100%;
 	display:none;
 }
-#page3,#page5,#page6 {
+#page3,#page5,#page6,#page7 {
 	background:url('../imgs/lines.png') no-repeat;
 	background-position:center;
 }
@@ -128,18 +128,18 @@ a:link {
 	width:180px;
 	height:70px;
 	text-align:center;
-	padding-top:30px;
+	padding-top:40px;
 	border-radius:50%;
 	background:#777;
 }
-#page6 .option {
+#page6 .option,#page7 .option {
 	font-size:25px;
 }
-#page6 .mid {
+#page6 .mid,#page7 .mid {
 	padding-top:20px;
 	height:80px;
 }
-#page6 .tall {
+#page6 .tall,#page7 .tall {
 	padding-top:0px;
 	height:100px;
 }
@@ -185,6 +185,71 @@ a:link {
 #page5 #option6 {
 	background:#fec13f;
 }	
+.subOption {
+	position:absolute;
+	width:120px;
+	height:50px;
+	text-align:center;
+	padding-top:30px;
+	border-radius:50%;
+	background:#777;
+}
+#page7 .subOption {
+	font-size:16px;
+}
+#page7 .subOption.mid {
+	padding-top:20px;
+	height:60px;
+}
+#page7 .subOption.tall {
+	padding-top:10px;
+	height:70px;
+}
+#option1Sub1 {
+	left:180px;
+	bottom:400px;
+}
+#option1Sub2 {
+	left:180px;
+	bottom:500px;
+}
+#option2Sub1 {
+	left:400px;
+	bottom:740px;
+}
+#option2Sub2 {
+	left:480px;
+	bottom:820px;
+}
+#option2Sub3 {
+}
+#option3Sub1 {
+}
+#option3Sub2 {
+}
+#option3Sub3 {
+}
+#option4Sub1 {
+	right:180px;
+	bottom:500px;
+}
+#option4Sub2 {
+	right:180px;
+	bottom:400px;
+}
+#option5Sub1 {
+}
+#option5Sub2 {
+}
+#option5Sub3 {
+}
+#option6Sub1 {
+}
+#option6Sub2 {
+}
+#option6Sub3 {
+}
+
 
 /******************************Navigation******************************/
 .start {
