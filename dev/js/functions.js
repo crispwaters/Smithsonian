@@ -1,6 +1,6 @@
 init();
 var cur_div = "page1";
-var div_stack[];
+var div_stack = new Array;
 
 $('.start').click(function() {
 	start_click();
