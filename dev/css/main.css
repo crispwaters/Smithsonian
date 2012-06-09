@@ -28,7 +28,7 @@ a:link {
 	height:100%;
 	display:none;
 }
-.topbar1 {
+.topBar1 {
 	position:absolute;
 	top:0px;
 	left:0px;
@@ -37,7 +37,7 @@ a:link {
 	width:100%;
 	background: #ff0000;
 }
-.topbar2 {
+.topBar2 {
 	position:absolute;
 	top:85px;
 	left:0px;
