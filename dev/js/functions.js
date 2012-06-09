@@ -1,6 +1,6 @@
+var cur_div = '#page1';
+var div_stack = new Array;
 init();
-var cur_div = "page1";
-var div_stack[];
 
 $('.start').click(function() {
 	start_click();
@@ -15,7 +15,8 @@ $('.back').click(function() {
 });
 
 function init(){
-	$('#page1').fadeIn(500);
+	cur_div = '#page1';
+	$(cur_div).fadeIn(500);
 }
 
 function start_click(){
