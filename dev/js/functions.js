@@ -29,7 +29,8 @@ function next_click(){
 }
 
 function back_click(){
-	alert("back clicked");
+	cur_div = div_stack.pop();
+	$(cur_div).fadeIn(500);
 
 }
 
