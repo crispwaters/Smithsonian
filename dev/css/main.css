@@ -2,6 +2,24 @@ html {
 	background:#222;
 	overflow:none;
 }
+h1 {
+	font:60px Arial Black;
+	color:#fff;
+	text-align:center;
+	margin:0px;
+	padding:0px;
+}
+
+/******************************Header******************************/
+#page1,#page2,#page3,#page4,#page5,#page6,#page7,#page8,#page9,#page10,#page11,#page12,#page13,#page14,#page15,#page16,
+#page17,#page18,#page19,#page20,#page21,#page22,#page23,#page24,#page25,#page26,#page27,#page28,#page29#page30 {
+	position:absolute;
+	top:0px;
+	left:0px;
+	margin:0px;
+	padding:0px;
+	width:100%;
+}
 #topbar1 {
 	position:absolute;
 	top:0px;
@@ -19,10 +37,20 @@ html {
 	padding:0px;
 	width:100%;
 }
-h1 {
-	font:60px Arial Black;
-	color:#fff;
-	text-align:center;
-	margin:0px;
-	padding:0px;
+
+/******************************Navigation******************************/
+#start {
+	position:absolute;
+	bottom:0px;
+	left:0px;
 }
+#sidetoside {
+	position:absolute;
+	bottom:0px;
+	right:0px;
+}	
+	
+	
+	
+	
+	
