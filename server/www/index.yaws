@@ -1,0 +1,11 @@
+<html>
+<head>
+</head>
+<body>
+<a href="/getmessage.yaws">Get message</a>
+<form name="inpput" action="/postmessage.yaws" method="post">
+Message: <input type="text" name="message" />
+<input type="submit" value="Submit" />
+</form>
+</body>
+</html>

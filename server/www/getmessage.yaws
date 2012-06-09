@@ -1,0 +1,6 @@
+<erl>
+
+out(_) ->
+       {html, queueserver:get_message()}.
+
+</erl>
