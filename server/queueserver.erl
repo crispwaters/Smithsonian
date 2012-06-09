@@ -23,7 +23,7 @@ init(_) ->
     {ok, WD} = file:get_cwd(),
     yaws:start_embedded(
       WD ++ "/www/",
-      [{servername, "smithsonianmini"}, {listen, {0,0,0,0}}]),
+      [{servername, "smithsonianmini"}, {listen, {0,0,0,0}}, {port, 80}]),
     {ok, queue:new()}.
 
 handle_call(get_message, _, Queue) ->
