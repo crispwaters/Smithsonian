@@ -63,7 +63,7 @@
 			};
 			function submitIdea()
 			{
-				var toSend = 'message="' + $('#idea').val() + '"';
+				var toSend = 'message=' + $('#idea').val() + '';
 				$.ajax({
 					type: "POST",
 					url: "postmessage.yaws",
