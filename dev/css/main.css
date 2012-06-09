@@ -32,8 +32,9 @@ a:link {
 }
 
 /******************************Header******************************/
-#page1,#page2,#page3,#page4,#page5,#page6,#page7,#page8,#page9,#page10,#page11,#page12,#page13,#page14,#page15,#page16,
-#page17,#page18,#page19,#page20,#page21,#page22,#page23,#page24,#page25,#page26,#page27,#page28,#page29#page30 {
+#page1,#page2,#page3,#page4,#page5,#page6,#page7,#page8,#page9,
+#page10,#page11,#page12,#page13,#page14,#page15,#page16,#page17,#page18,#page19,
+#page20,#page21,#page22,#page23,#page24,#page25,#page26,#page27,#page28,#page29#page30 {
 	position:absolute;
 	top:0px;
 	left:0px;
@@ -42,7 +43,8 @@ a:link {
 	display:none;
 }
 #page3 {
-	background:url('imgs/lines.png') no-repeat;
+	background:url('../imgs/lines.png') no-repeat;
+	background-position:center;
 }
 .topBar1 {
 	position:absolute;
@@ -113,6 +115,40 @@ a:link {
 	text-align:center;
 	font-size:170px;
 }
+.option {
+	position:absolute;
+	width:200px;
+	height:70px;
+	text-align:center;
+	padding-top:30px;
+	border-radius:50%;
+	background:#555;
+}
+#option1 {
+	left:300px;
+	bottom:450px;
+}
+#option2 {
+	left:550px;
+	bottom:650px;
+}
+#option3 {
+	right:550px;
+	bottom:650px;
+}
+#option4 {
+	right:300px;
+	bottom:450px;
+}
+#option5 {
+	right:550px;
+	bottom:200px;
+}
+#option6 {
+	left:550px;
+	bottom:200px;
+}
+	
 
 /******************************Navigation******************************/
 .start {
