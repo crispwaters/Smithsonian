@@ -42,7 +42,6 @@ marquee {
 }
 </style>
 </head>
-
 <body>
 <div class="ticker">
 <marquee id="s1" behavior="scroll" scrollamount="1" direction="left"><p id="t1">welcome to the college of design smithsonian demo!</p></marquee>
@@ -67,7 +66,7 @@ marquee {
 </div>
 <script type="text/javascript">
 $('#vidcontent').get(0).addEventListener('ended',vStart,false);
-var curMsg = "welcome to the college of design smithsonian demo!"
+var curMsg = "design transforms communities"
 
 $('#s1').hide();
 $('#s2').hide();
@@ -82,12 +81,8 @@ function playVideo()
 }
 playVideo();
 function vStart(e) {
-        if(!e) { e = window.event; }
-	$('#s1').show().marquee();
-	setTimeout("$('#s2').show().marquee()",9040);
-	setTimeout("$('#s3').show().marquee()",18080);
-	setTimeout("$('#s4').show().marquee()",27120);
-	setInterval("newMsgCheck()", 5000);
+	if(!e) { e = window.event; }
+	marqueeReset(curMsg);
 }
 function newMsgCheck(){
 	$.get(
@@ -99,21 +94,35 @@ function newMsgCheck(){
 				$('#vidcontent').get(0).play();
 				function vUpdate(e) {
 					if(!e) { e = window.event; }
-					var lData = data.toLowerCase();
-					curMsg = lData;
-					var dif = 150 - lData.length;
-					for (i = 0; i < dif; i++)
-					{
-						lData += "&nbsp;";
-					}
-					$('#t1').html(lData);
-					$('#t2').html(lData);
-					$('#t3').html(lData);
-					$('#t4').html(lData);
+					marqueeReset(data);
 				}
 			}
     	}
 	);
+}
+
+
+function marqueeReset(data){
+	var i = 0;
+	var j = 0;
+	var lData = data.toLowerCase();
+	curMsg = lData;
+	var dif = 150 - lData.length;
+	for (i = 0; i < dif; i++)
+	{
+		lData += "&nbsp;";
+	}
+	$('.ticker > *').remove();
+	$('.ticker').each(function(index){
+		j+=1;
+		$(this).html('<marquee id="s' + j + '" behavior="scroll" scrollamount="1" direction="left"><p id="t' + j + '"></p></marquee>');
+		$('#s' + j).hide();
+		$('#t' + j).html(lData);
+	});
+	$('#s1').show().marquee();
+	setTimeout("$('#s2').show().marquee()",9040);
+	setTimeout("$('#s3').show().marquee()",18080);
+	setTimeout("$('#s4').show().marquee()",27120);
 }
 </script>
 </body>
