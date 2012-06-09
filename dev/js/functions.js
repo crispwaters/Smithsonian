@@ -20,7 +20,10 @@ $('.next1').click(function() {
 });
 
 $('.back').click(function() {
-	back_click();
+	if(!$(this).parent().children().is(':animated')){
+		back_click();
+	}
+	return false;
 });
 
 function init(){
