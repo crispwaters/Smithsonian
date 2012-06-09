@@ -1,34 +1,26 @@
 var cur_div;
 var div_stack;
-var blockAnimation = false;
 init();
 
 $('.start').click(function() {
-	if(blockAnimation == false){
-		blockAnimation = true;
-		$(this).stop();
-		start_click();
-		blockAnimation = false;
-	}
-	return false;
+	start_click();
 });
 
 $('.next').click(function() {
-	if(blockAnimation == false){
-		blockAnimation = true;
-		$(this).stop();
+	if(!$(this).parent().children().is(':animated')){
 		next_click();
-		blockAnimation = false;
+	}
+	return false;
+});
+$('.next1').click(function() {
+	if(!$(this).parent().parent().children().is(':animated')){
+		next_click();
 	}
 	return false;
 });
 
 $('.back').click(function() {
-	if(blockAnimation == false){
-		blockAnimation = true;
-		back_click();
-		blockAnimation = false;
-	}
+	back_click();
 });
 
 function init(){
@@ -66,7 +58,6 @@ function back_click(){
 	display_button();
 	$(cur_div).delay(500);
 	$(cur_div).fadeIn(500);
-
 }
 
 function button_click(nextPage){
