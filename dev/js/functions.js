@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 var cur_div = "page1";
 var div_stack[];
 
-$('#start').click(function() {
-=======
 $('.start').click(function() {
->>>>>>> 2079cc5e875fb84b3eaf26404431fde7cc0c0b32
 	start_click();
 });
 
@@ -32,10 +28,6 @@ function next_click(){
 
 function back_click(){
 	alert("back clicked");
-<<<<<<< HEAD
-}
-=======
-	
+
 }
 
->>>>>>> 2079cc5e875fb84b3eaf26404431fde7cc0c0b32
