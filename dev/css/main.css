@@ -45,7 +45,7 @@ a:link {
 	height:100%;
 	display:none;
 }
-#page3,#page5,#page6 {
+#page3,#page5 {
 	background:url('../imgs/lines.png') no-repeat;
 	background-position:center;
 }
@@ -93,7 +93,7 @@ a:link {
 /******************************Yellow Center Info Oval******************************/
 #centerInfoYellow {
 	position:absolute;
-	bottom:350px;
+	bottom:300px;
 	right:550px;
 	height:300px;
 	width:600px;
@@ -105,12 +105,8 @@ a:link {
 #centerInfoYellow h1 {
 	color:#000;
 }
-#page2 #centerInfoYellow {
-	padding-top:70px;
-	height:280px;
-}
 
-/******************************Web Layout******************************/
+/******************************First Web Layout******************************/
 .webCenterCircle {
 	position:absolute;
 	top:450px;
@@ -130,18 +126,7 @@ a:link {
 	text-align:center;
 	padding-top:30px;
 	border-radius:50%;
-	background:#777;
-}
-#page6 .option {
-	font-size:25px;
-}
-#page6 .mid {
-	padding-top:20px;
-	height:80px;
-}
-#page6 .tall {
-	padding-top:0px;
-	height:100px;
+	background:#555;
 }
 #option1 {
 	left:300px;
@@ -185,15 +170,6 @@ a:link {
 #page5 #option6 {
 	background:#fec13f;
 }	
-.option {
-	position:absolute;
-	width:100px;
-	height:40px;
-	text-align:center;
-	padding-top:30px;
-	border-radius:50%;
-	background:#777;
-}
 
 /******************************Navigation******************************/
 .start {
