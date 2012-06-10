@@ -199,10 +199,15 @@ function animateIdeas(){
 		setTimeout("$('#page5 #ideaCenter1').fadeIn(duration)", 2000);
 		setTimeout("$('#page5 #ideaCenter2').fadeIn(duration)", start);
 		setTimeout("swapIdea('#page5 #option2', '#page5 #option4')", start+=inc);
-		setTimeout("swapIdea('#page5 #option1', '#page5 #option3')", start+=inc);
-		setTimeout("swapIdea('#page5 #option2', '#page5 #option5')", start+=inc);
-		setTimeout("swapIdea('#page5 #option2', '#page5 #option6')", start+=inc);
-		setTimeout("swapIdea('#page5 #option1', '#page5 #option5')", start+=inc);
+		setTimeout("remove()", start+=inc);
+		setTimeout("swapIdea('#page5 #option1', '#page5 #option3')", start+1);
+		setTimeout("remove()", start+=inc);
+		setTimeout("swapIdea('#page5 #option2', '#page5 #option5')", start+1);
+		setTimeout("remove()", start+=inc);
+		setTimeout("swapIdea('#page5 #option2', '#page5 #option6')", start+1);
+		setTimeout("remove()", start+=inc);
+		setTimeout("swapIdea('#page5 #option1', '#page5 #option5')", start+1);
+		setTimeout("remove()", start+=inc);
 		setTimeout("$('#page5 #ideaCenter3').fadeIn(duration)", start);
 		setTimeout("makeClickable()", start+=inc+1);
 	}	
@@ -212,10 +217,13 @@ function animateIdeas(){
 
 function swapIdea(idea1,idea2){
 	$(idea1).addClass('current');
-	$(idea2).addClass('current');
-	setTimeout("$(idea1).removeClass('current')", 1450);
-	setTimeout("$(idea2).removeClass('current')", 1450);
+	$(idea2).addClass('current').delay(1450);
 }
+
+function remove(){
+	$('#page5 .option').removeClass('current');
+}
+
 function makeClickable(){
     $('#page5 #option1').attr("onclick", "pick_two('#page5 #option1')");
     $('#page5 #option2').attr("onclick", "pick_two('#page5 #option2')");

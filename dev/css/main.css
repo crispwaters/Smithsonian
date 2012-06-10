@@ -362,8 +362,17 @@ a:link {
 	bottom:50px;
 	right:50px;
 }	
-	
-	
+.postIdea {
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	height:150px;
+	width:150px;
+	border-radius:50%;
+	background:#52ae42;
+	text-align:center;
+	display:none;
+}	
 	
 	
 	
