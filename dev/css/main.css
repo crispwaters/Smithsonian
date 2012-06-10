@@ -177,6 +177,7 @@ a:link {
 	font-size:60px;
 }
 
+/********** Option Styling **********/
 .option {
 	position:absolute;
 	width:180px;
@@ -186,8 +187,23 @@ a:link {
 	border-radius:50%;
 	background:#777;
 }
-.option.current{
-	background:#fff;
+#option1.current{
+	background:#e51f25;
+}
+#option2.current{
+	background:#0eabe0;
+}
+#option3.current{
+	background:#52ae42;
+}
+#option4.current{
+	background:#f89c3e;
+}
+#option5.current{
+	background:#8f53a2;
+}
+#option6.current{
+	background:#fec13f;
 }
 #page6 .option,#page6 .option {
 	font-size:25px;
@@ -242,6 +258,8 @@ a:link {
 #page5 #option6 {
 	background:#fec13f;
 }	
+
+/********** Sub-Option Styling **********/
 .subOption {
 	position:absolute;
 	width:120px;
