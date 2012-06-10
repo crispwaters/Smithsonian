@@ -476,6 +476,14 @@ function post_idea(idea)
     if(idea == 'new_idea')
     {
         playAudio();
+        div_stack.push(cur_div);
+		$(cur_div).fadeOut(duration);
+		$(cur_div).fadeOut(duration);
+		cur_div = '#page8';
+		display_button();
+		$(cur_div).delay(duration);
+		$(cur_div).fadeIn(duration);
+		setTimeout('start_click()', 5000);
     }
     else
     {

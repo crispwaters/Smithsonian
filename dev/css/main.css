@@ -119,6 +119,13 @@ border:0px;
 	left:0px;
 	bottom:600px;
 }
+#page8 #startButtonHead {
+	position:absolute;
+	width:100%;
+	text-align:center;
+	left:0px;
+	bottom:200px;
+}
 #startGreen,#startYellow {
 	position:absolute;
 	bottom:300px;
