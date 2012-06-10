@@ -36,7 +36,7 @@ a:link {
 }
 
 /******************************Header******************************/
-#page1,#page2,#page3,#page4,#page5,#page6,#page7,#page8,#page9,
+#page1,#page2,#page3,#page4,#page5,#page6,#page6,#page8,#page9,
 #page10,#page11,#page12,#page13,#page14,#page15,#page16,#page17,#page18,#page19 {
 	position:absolute;
 	top:0px;
@@ -45,7 +45,7 @@ a:link {
 	height:100%;
 	display:none;
 }
-#page3,#page5,#page6,#page6 {
+#page3,#page5 {
 	background:url('../imgs/lines.png') no-repeat;
 	background-position:center;
 }
@@ -84,7 +84,7 @@ a:link {
 	text-align:center;
 	font-size:30px;
 }
-#page7 .tall {
+#page6 .tall {
 	padding:0;
 	height:250px;
 }
@@ -205,14 +205,14 @@ a:link {
 #option6.current{
 	background:#fec13f;
 }
-#page6 .option,#page6 .option {
+#page5 .option,#page5 .option {
 	font-size:25px;
 }
-#page6 .mid,#page6 .mid {
+#page5 .mid,#page5 .mid {
 	padding-top:20px;
 	height:80px;
 }
-#page6 .tall,#page6 .tall {
+#page5 .tall,#page5 .tall {
 	padding-top:0px;
 	height:100px;
 }
@@ -220,44 +220,26 @@ a:link {
 	left:300px;
 	bottom:450px;
 }
-#page5 #option1 {
-	background:#e51f25;
-}
 #option2 {
 	left:530px;
 	bottom:720px;
-}
-#page5 #option2 {
-	background:#0eabe0;
 }
 #option3 {
 	right:570px;
 	bottom:720px;
 }
-#page5 #option3 {
-	background:#52ae42;
-}
 #option4 {
 	right:300px;
 	bottom:450px;
-}
-#page5 #option4 {
-	background:#f89c3e;
 }
 #option5 {
 	right:570px;
 	bottom:220px;
 }
-#page5 #option5 {
-	background:#8f53a2;
-}
 #option6 {
 	left:530px;
 	bottom:220px;
 }
-#page5 #option6 {
-	background:#fec13f;
-}	
 
 /********** Sub-Option Styling **********/
 .subOption {
@@ -270,14 +252,14 @@ a:link {
 	background:#ccc;
 	display:none;
 }
-#page6 .subOption {
+#page5 .subOption {
 	font-size:16px;
 }
-#page6 .subOption.mid {
+#page5 .subOption.mid {
 	padding-top:20px;
 	height:60px;
 }
-#page6 .subOption.tall {
+#page5 .subOption.tall {
 	padding-top:10px;
 	height:70px;
 }
