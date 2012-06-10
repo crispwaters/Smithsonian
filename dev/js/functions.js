@@ -57,6 +57,13 @@ $('.next1').click(function() {
 	return false;
 });
 
+$('.postIdea').click(function() {
+	if(!$(this).parent().parent().children().is(':animated')){
+		next_click();
+	}
+	return false;
+});
+
 $('.back').click(function() {
 	if(!$(this).parent().children().is(':animated')){
 		back_click();
@@ -143,7 +150,7 @@ function display_button(){
 		$('.back').fadeOut(duration);
 		$('.next').fadeOut(duration);
 	}*/
-	if(cur_div == '#page1' || cur_div == '#page3' || cur_div == '#page5'){
+	if(cur_div == '#page1' || cur_div == '#page3' || cur_div == '#page5' || cur_div == '#page6'){
 		$('.start').fadeOut(duration);
 		$('.back').fadeOut(duration);
 		$('.next').fadeOut(duration);
