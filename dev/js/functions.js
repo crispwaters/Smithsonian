@@ -1,6 +1,9 @@
 var cur_div;
 var div_stack;
-var num_active;
+var oval = '';
+var nextOval = '';
+var interval;
+//var num_active;
 init();
 
 
@@ -56,9 +59,9 @@ function next_click(){
 	display_button();
 	$(cur_div).delay(500);
 	$(cur_div).fadeIn(500);
-	if(cur_div == "#page5")
+	if(cur_div == "#page3")
 	{
-		auto_toggle();
+		interval = setInterval('oAnimate()', 500);
 	}
 }
 
@@ -68,10 +71,11 @@ function back_click(){
 	display_button();
 	$(cur_div).delay(500);
 	$(cur_div).fadeIn(500);
+	/*
 	if(cur_div == "#page5")
 	{
 		auto_toggle();
-	}
+	}*/
 }
 
 function button_click(nextPage){
@@ -99,6 +103,21 @@ function display_button(){
 	}
 }
 
+function oAnimate(){
+	oval = $('div.option.current');
+	nextOval = oval.next('div.option');
+	console.log(nextOval.length);
+	if(nextOval.length === 0){
+		clearInterval(interval);
+		next_click();
+		$('#page3 #option1').addClass('current');
+	}	
+	oval.removeClass('current');
+	nextOval.addClass('current');
+}
+
+
+/*
 function toggle_color(id)
 {
     if($(id).css("background") == "#777")
@@ -128,6 +147,7 @@ function toggle_color(id)
     }    
 }
 
+
 function auto_toggle()
 {
     var i;
@@ -149,5 +169,5 @@ function auto_toggle()
     }
     next_click();
 }
-
+*/
 

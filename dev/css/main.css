@@ -132,6 +132,9 @@ a:link {
 	border-radius:50%;
 	background:#777;
 }
+.option.current{
+	background:#fff;
+}
 #page6 .option,#page6 .option {
 	font-size:25px;
 }
