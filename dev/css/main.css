@@ -50,7 +50,7 @@ a:link {
 	height:100%;
 	display:none;
 }
-#page3,#page5 {
+#page3,#page5,#page7 {
 	background:url('../imgs/lines.png') no-repeat;
 	background-position:center;
 }
@@ -257,14 +257,14 @@ a:link {
 #option6.current{
 	background:#fec13f;
 }
-#page5 .option,#page5 .option {
+#page5 .option,#page7 .option {
 	font-size:25px;
 }
-#page5 .mid,#page5 .mid {
+#page5 .mid,#page7 .mid {
 	padding-top:20px;
 	height:80px;
 }
-#page5 .tall,#page5 .tall {
+#page5 .tall,#page7 .tall {
 	padding-top:0px;
 	height:100px;
 }
@@ -304,14 +304,17 @@ a:link {
 	background:#777;
 	display:none;
 }
-#page5 .subOption {
+#page7 .subOption {
+	display:block;
+}
+#page5 .subOption,#page7 .subOption {
 	font-size:16px;
 }
-#page5 .subOption.mid {
+#page5 .subOption.mid,#page7 .subOption.mid {
 	padding-top:20px;
 	height:60px;
 }
-#page5 .subOption.tall {
+#page5 .subOption.tall,#page7 .subOption.tall {
 	padding-top:10px;
 	height:70px;
 }
@@ -401,8 +404,8 @@ a:link {
 }	
 .postIdea {
 	position:absolute;
-	right:0px;
-	bottom:0px;
+	right:80px;
+	bottom:30px;
 	height:110px;
 	width:150px;
 	border-radius:50%;

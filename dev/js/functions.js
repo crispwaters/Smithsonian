@@ -4,7 +4,7 @@ var oval = '';
 var nextOval = '';
 var interval;
 var ideaInterval;
-var duration = '100';
+var duration = '500';
 var num_picked;
 var answer_array_tourism = [
 "hotel and shopping weekend package deals",
@@ -73,7 +73,7 @@ $('.back').click(function() {
 
 
 function init(){
-	cur_div = '#page7';
+	cur_div = '#page1';
 	display_button();
 	$('.start').delay(duration);
 	$('.back').delay(duration);
@@ -112,7 +112,11 @@ function next_click(){
 	}
 	else if(cur_div == "#page5")
 	{
-		setTimeout("ideaInterval = setInterval('animateIdeas()', 100)", duration);
+		setTimeout("ideaInterval = setInterval('animateIdeas()', 1000)", duration);
+	}
+	else if(cur_div == "#page7")
+	{
+		setTimeout('start_click()', 5000);
 	}
 }
 
@@ -208,7 +212,7 @@ function oAnimate(){
 function animateIdeas(){
 	oval = $('#page5 div.option.current');
 	nextOval = oval.next('#page5 div.option');
-	var start = 5000;
+	var start = 6000;
 	var inc = 1500;
 	if(nextOval.length === 0){
 	    oval.removeClass('current');
@@ -218,7 +222,7 @@ function animateIdeas(){
 		setTimeout("$('#page5 .subOption').fadeIn(duration)", 2000);
 		setTimeout("$('#page5 #ideaCenter1').fadeIn(duration)", 2000);
 		setTimeout("$('#page5 #ideaCenter2').fadeIn(duration)", start);
-		setTimeout("swapIdea('#page5 #option2', '#page5 #option4')", start+=inc+1000);
+		setTimeout("swapIdea('#page5 #option2', '#page5 #option4')", start+=inc+3000);
 		setTimeout("remove()", start+=inc);
 		setTimeout("swapIdea('#page5 #option1', '#page5 #option3')", start+1);
 		setTimeout("remove()", start+=inc);
@@ -416,7 +420,7 @@ function post_idea(idea)
             url: "postmessage.yaws",
             data: toSend,
             success: function(response) {
-                next_page();
+                next_click();
             },
             error: function(msg) {
                 alert("A server error occured, please try again");
@@ -425,59 +429,3 @@ function post_idea(idea)
     }
 
 }
-
-
-/*
-function toggle_color(id)
-{
-    if($(id).css("background") == "#777")
-    {
-        if(num_active < 2)
-        {
-            if(id == "#option1")
-                $(id).css("background", "#e51f25");
-            if(id == '#option2')
-                $(id).css("background", "#0eabe0");
-            if(id == "#option3")
-                $(id).css("background", "#52ae42");
-            if(id == '#option4')
-                $(id).css("background", "#f89c3e");
-            if(id == '#option5')
-                $(id).css("background", "#8f53a2");
-            if(id == '#option6')
-                $(id).css("background", "#fec13f");
-            
-            num_active++;
-        }    
-    }
-    else
-    {
-        $(id).css("background", "#777");
-        num_active = num_active - 1;
-    }    
-}
-
-
-function auto_toggle()
-{
-    var i;
-    var str;
-    for(i=1;i<8;i++)
-    {
-        if(i>1)
-        {   
-            str = (i-1)+' ';
-            $(this).delay(duration);
-            toggle_color('#option' + str);
-        }
-        if(i<7)
-        {
-            str = i + ' ';
-            $(this).delay(duration);
-            toggle_color('#option' + str);
-        }    
-    }
-    next_click();
-}
-*/
-
