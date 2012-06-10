@@ -123,8 +123,10 @@ border:0px;
 	position:absolute;
 	width:100%;
 	text-align:center;
+	padding:20px 0px;
 	left:0px;
-	bottom:200px;
+	bottom:150px;
+	background:#000;
 }
 #startGreen,#startYellow {
 	position:absolute;
