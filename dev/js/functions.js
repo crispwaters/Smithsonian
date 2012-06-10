@@ -192,7 +192,7 @@ function animateIdeas(){
 	    oval.removeClass('current');
 		clearInterval(ideaInterval);
 		setTimeout("$('#page5 div.option').addClass('current')", 1);
-		setTimeout("$('#page5 div.option').removeClass('current')", 1500);
+		setTimeout("$('#page5 div.option').removeClass('current')", 1000);
 	}	
 	oval.removeClass('current');
 	nextOval.addClass('current');
