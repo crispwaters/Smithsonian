@@ -38,7 +38,7 @@ function init(){
 	$('.start').delay(duration);
 	$('.back').delay(duration);
 	$('.next').delay(duration);
-	var num_picked = 0;
+	num_picked = 0;
 	$('.start').delay(500);
 	$('.back').delay(500);
 	$('.next').delay(500);
@@ -60,7 +60,7 @@ function next_click(){
 	div_stack.push(cur_div);
 	var temp = cur_div + 'Next';
 	$(cur_div).fadeOut(duration);
-	var num_picked = 0;
+	num_picked = 0;
 	$(cur_div).fadeOut(500);
 	cur_div = $(temp).val();
 	display_button();
@@ -84,7 +84,7 @@ function back_click(){
 	}
 	$(cur_div).delay(500);
 	$(cur_div).fadeIn(500);
-	var num_picked = 0;
+	num_picked = 0;
 	/*
 	if(cur_div == "#page5")
 	{
@@ -103,23 +103,23 @@ function button_click(nextPage){
 }
 
 function display_button(){
-	if(cur_div == '#page1'){
+	/*if(cur_div == '#page1'){
+		$('.start').fadeOut(duration);
+		$('.back').fadeOut(duration);
+		$('.next').fadeOut(duration);
+	}*/
+	if(cur_div == '#page1' || cur_div == '#page3' || cur_div == '#page5'){
 		$('.start').fadeOut(duration);
 		$('.back').fadeOut(duration);
 		$('.next').fadeOut(duration);
 	}
-	if(cur_div == '#page1' || cur_div == '#page3'){
-		$('.start').fadeOut(500);
-		$('.back').fadeOut(500);
-		$('.next').fadeOut(500);
-	}
 	else if(cur_div == '#page6'){
-	    $('.start').delay(500);
-		$('.back').delay(500);
+	    $('.start').delay(duration);
+		$('.back').delay(duration);
 		//$('.next').delay(500);
-		$('.start').fadeIn(500);
-		$('.back').fadeIn(500);
-		$('.next').fadeOut(500);
+		$('.start').fadeIn(duration);
+		$('.back').fadeIn(duration);
+		$('.next').fadeOut(duration);
 	}	
 	else{
 		$('.start').delay(duration);
@@ -157,13 +157,19 @@ function oAnimate(){
 * Clicking on a deselected option should not do anything
 */
 function pick_two(cur_option){
-    //First determine if the option is being selected or deselected
-    
-    //If it's being selected, determine if a new option can be added.
-        //If it can be selected, select it and increment num_picked
-        
-    //Else
-        //Deselect it and decrement num_picked
+    if($(cur_option).hasClass('current'))
+    {
+        $(cur_option).removeClass('current');
+        num_picked--;
+    }
+    else
+    {
+        if(num_picked < 2)
+        {
+            $(cur_option).addClass('current');
+            num_picked++;
+        }    
+    }
         
     //Button Logic Below
     if(num_picked < 2)
