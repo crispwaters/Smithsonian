@@ -3,6 +3,7 @@ var div_stack;
 var oval = '';
 var nextOval = '';
 var interval;
+var num_picked;
 //var num_active;
 init();
 
@@ -33,6 +34,7 @@ $('.back').click(function() {
 function init(){
 	cur_div = '#page1';
 	display_button();
+	var num_picked = 0;
 	$('.start').delay(500);
 	$('.back').delay(500);
 	$('.next').delay(500);
@@ -52,6 +54,7 @@ function start_click(){
 function next_click(){
 	div_stack.push(cur_div);
 	var temp = cur_div + 'Next';
+	var num_picked = 0;
 	$(cur_div).fadeOut(500);
 	cur_div = $(temp).val();
 	display_button();
@@ -69,6 +72,7 @@ function back_click(){
 	display_button();
 	$(cur_div).delay(500);
 	$(cur_div).fadeIn(500);
+	var num_picked = 0;
 	/*
 	if(cur_div == "#page5")
 	{
@@ -86,11 +90,19 @@ function button_click(nextPage){
 }
 
 function display_button(){
-	if(cur_div == '#page1'){
+	if(cur_div == '#page1' || cur_div == '#page3'){
 		$('.start').fadeOut(500);
 		$('.back').fadeOut(500);
 		$('.next').fadeOut(500);
 	}
+	else if(cur_div == '#page6'){
+	    $('.start').delay(500);
+		$('.back').delay(500);
+		//$('.next').delay(500);
+		$('.start').fadeIn(500);
+		$('.back').fadeIn(500);
+		$('.next').fadeOut(500);
+	}	
 	else{
 		$('.start').delay(500);
 		$('.back').delay(500);
@@ -113,6 +125,38 @@ function oAnimate(){
 	}	
 	oval.removeClass('current');
 	nextOval.addClass('current');
+}
+
+/*
+* Used for Page 6
+* Needs to light up options upon click
+* Can only light up two options at a time
+* Can only allow the user to continue if two options are selected
+* Clicking on a selected option should deselect it
+* Clicking on a deselected option should not do anything
+*/
+function pick_two(cur_option){
+    //First determine if the option is being selected or deselected
+    
+    //If it's being selected, determine if a new option can be added.
+        //If it can be selected, select it and increment num_picked
+        
+    //Else
+        //Deselect it and decrement num_picked
+        
+    //Button Logic Below
+    if(num_picked < 2)
+    {
+        //Hide "I have an idea button"
+    }
+    else if(num_picked == 2)
+    {
+        //Show "I have an idea button"
+    }
+    else
+    {
+        //Should never reach
+    }
 }
 
 
