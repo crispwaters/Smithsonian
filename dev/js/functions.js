@@ -35,7 +35,7 @@ var answer_array_tourism = [
 "bike trail map showing all towns along a route and their main attractions",
 "murals on town buildings displaying local attractions",
 "'this could be the view from your room!' advertising",
-"a 'trading spaces' renovation swap: redo two bldgs, one in each town",
+"a 'trading spaces' renovation swap: redo two buildings, one in each town",
 "gardens designed with historically significant plants"];
 //var num_active;
 
