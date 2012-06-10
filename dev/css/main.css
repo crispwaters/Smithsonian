@@ -129,6 +129,21 @@ a:link {
 }
 
 /******************************Yellow Center Info Oval******************************/
+#page5 #ideaCenter1,#page5 #ideaCenter2,#page5 #ideaCenter3,#page5 #ideaCenter4 {
+	position:absolute;
+	bottom:350px;
+	right:550px;
+	height:300px;
+	width:600px;
+	padding-top:50px;
+	text-align:center;
+	background:#faed3c;
+	border-radius:50%;
+	display:none;
+}
+#ideaCenter1 h1,#ideaCenter2 h1,#ideaCenter3 h1,#ideaCenter4 h1 {
+	color:#000;
+}
 #centerInfoYellow {
 	position:absolute;
 	bottom:350px;

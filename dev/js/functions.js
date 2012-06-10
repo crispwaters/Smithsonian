@@ -3,6 +3,7 @@ var div_stack;
 var oval = '';
 var nextOval = '';
 var interval;
+var ideaInterval;
 var duration = '500';
 var num_picked;
 //var num_active;
@@ -39,9 +40,9 @@ function init(){
 	$('.back').delay(duration);
 	$('.next').delay(duration);
 	num_picked = 0;
-	$('.start').delay(500);
-	$('.back').delay(500);
-	$('.next').delay(500);
+	$('.start').delay(duration);
+	$('.back').delay(duration);
+	$('.next').delay(duration);
 	$('.start').css('display', 'none');
 	$('.back').css('display', 'none');
 	$('.next').css('display', 'none');
@@ -61,14 +62,18 @@ function next_click(){
 	var temp = cur_div + 'Next';
 	$(cur_div).fadeOut(duration);
 	num_picked = 0;
-	$(cur_div).fadeOut(500);
+	$(cur_div).fadeOut(duration);
 	cur_div = $(temp).val();
 	display_button();
 	$(cur_div).delay(duration);
 	$(cur_div).fadeIn(duration);
 	if(cur_div == "#page3")
 	{
-		setTimeout("interval = setInterval('oAnimate()', duration)", 500);
+		setTimeout("interval = setInterval('oAnimate()', duration)", duration);
+	}
+	else if(cur_div == "#page5")
+	{
+		setTimeout("ideaInterval = setInterval('animateIdeas()', duration)", duration);
 	}
 }
 
@@ -82,14 +87,13 @@ function back_click(){
 	{
 		interval = setInterval('oAnimate()', duration);
 	}
-	$(cur_div).delay(500);
-	$(cur_div).fadeIn(500);
-	num_picked = 0;
-	/*
-	if(cur_div == "#page5")
+	else if(cur_div == "#page5")
 	{
-		auto_toggle();
-	}*/
+		ideaInterval = setInterval('animateIdeas()', duration);
+	}
+	$(cur_div).delay(duration);
+	$(cur_div).fadeIn(duration);
+	num_picked = 0;
 	animateReset();
 }
 
@@ -113,10 +117,10 @@ function display_button(){
 		$('.back').fadeOut(duration);
 		$('.next').fadeOut(duration);
 	}
-	else if(cur_div == '#page6'){
+	else if(cur_div == '#page5'){
 	    $('.start').delay(duration);
 		$('.back').delay(duration);
-		//$('.next').delay(500);
+		//$('.next').delay(duration);
 		$('.start').fadeIn(duration);
 		$('.back').fadeIn(duration);
 		$('.next').fadeOut(duration);
@@ -136,13 +140,26 @@ function animateReset(){
 }
 
 function oAnimate(){
-	oval = $('div.option.current');
-	nextOval = oval.next('div.option');
+	oval = $('#page3 div.option.current');
+	nextOval = oval.next('#page3 div.option');
 	if(nextOval.length === 0){
 	    oval.removeClass('current');
 		clearInterval(interval);
 		setTimeout("$('#page3 div.option').addClass('current')", 1);
 		setTimeout('next_click()', 1000);
+	}	
+	oval.removeClass('current');
+	nextOval.addClass('current');
+}
+
+function animateIdeas(){
+	oval = $('#page5 div.option.current');
+	nextOval = oval.next('#page5 div.option');
+	if(nextOval.length === 0){
+	    oval.removeClass('current');
+		clearInterval(ideaInterval);
+		setTimeout("$('#page5 div.option').addClass('current')", 1);
+		setTimeout("$('#page5 div.option').removeClass('current')", 1500);
 	}	
 	oval.removeClass('current');
 	nextOval.addClass('current');
