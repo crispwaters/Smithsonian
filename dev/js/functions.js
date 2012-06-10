@@ -169,10 +169,10 @@ function display_button(){
 	else if(cur_div == '#page6'){
 	    $('.start').delay(duration);
 		$('.back').delay(duration);
-		//$('.next').delay(duration);
+		$('.next').delay(duration);
 		$('.start').fadeIn(duration);
 		$('.back').fadeIn(duration);
-		$('.next').fadeOut(duration);
+		$('.next').fadeIn(duration);
 	    $('.postIdea').fadeOut(duration);
 
 	}	
@@ -416,10 +416,10 @@ function post_idea(idea)
             url: "postmessage.yaws",
             data: toSend,
             success: function(response) {
-            
+                next_page();
             },
             error: function(msg) {
-            
+                alert("A server error occured, please try again");
             }
         });
     }
