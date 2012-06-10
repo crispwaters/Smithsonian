@@ -1,11 +1,13 @@
 var cur_div;
 var div_stack;
+<<<<<<< HEAD
 var oval = '';
 var nextOval = '';
 var interval;
 //var num_active;
+=======
+>>>>>>> e302f89fda565a5811cdaa7a6d0c3f47aa232e67
 init();
-
 
 $('.start').click(function() {
 	start_click();
@@ -33,7 +35,6 @@ $('.back').click(function() {
 
 function init(){
 	cur_div = '#page1';
-	num_active = 0;
 	display_button();
 	$('.start').delay(500);
 	$('.back').delay(500);
@@ -59,10 +60,13 @@ function next_click(){
 	display_button();
 	$(cur_div).delay(500);
 	$(cur_div).fadeIn(500);
+<<<<<<< HEAD
 	if(cur_div == "#page3")
 	{
 		interval = setInterval('oAnimate()', 500);
 	}
+=======
+>>>>>>> e302f89fda565a5811cdaa7a6d0c3f47aa232e67
 }
 
 function back_click(){
@@ -71,11 +75,14 @@ function back_click(){
 	display_button();
 	$(cur_div).delay(500);
 	$(cur_div).fadeIn(500);
+<<<<<<< HEAD
 	/*
 	if(cur_div == "#page5")
 	{
 		auto_toggle();
 	}*/
+=======
+>>>>>>> e302f89fda565a5811cdaa7a6d0c3f47aa232e67
 }
 
 function button_click(nextPage){
@@ -103,6 +110,7 @@ function display_button(){
 	}
 }
 
+<<<<<<< HEAD
 function oAnimate(){
 	oval = $('div.option.current');
 	nextOval = oval.next('div.option');
@@ -171,3 +179,5 @@ function auto_toggle()
 }
 */
 
+=======
+>>>>>>> e302f89fda565a5811cdaa7a6d0c3f47aa232e67
