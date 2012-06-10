@@ -158,7 +158,7 @@ function display_button(){
 		$('.next').fadeOut(duration);
 		$('.postIdea').fadeOut(duration);
 	}
-	else if(cur_div == '#page5'){
+	else if(cur_div == '#page5' || cur_div == '#page6'){
 	    $('.start').delay(duration);
 		$('.back').delay(duration);
 		//$('.next').delay(duration);
