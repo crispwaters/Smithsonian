@@ -193,11 +193,15 @@ function animateIdeas(){
 		clearInterval(ideaInterval);
 		setTimeout("$('#page5 div.option').addClass('current')", 1);
 		setTimeout("$('#page5 div.option').removeClass('current')", 1000);
+		setTimeout("$('#page5 div.subOption').fadeIn(duration)", 1500);;
 	}	
 	oval.removeClass('current');
 	nextOval.addClass('current');
 }
 
+function makeClickable(){
+}
+	
 /*
 * Used for Page 6
 * Needs to light up options upon click
