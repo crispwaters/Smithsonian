@@ -139,9 +139,10 @@ function oAnimate(){
 	oval = $('div.option.current');
 	nextOval = oval.next('div.option');
 	if(nextOval.length === 0){
+	    oval.removeClass('current');
 		clearInterval(interval);
-		$('#page3 div.option').addClass('current');
-		$('#page3 #option6').addClass('current');
+		setTimeout("$('#page3 div.option').addClass('current')", 500);
+		//$('#page3 #option6').addClass('current');
 		setTimeout('next_click()', 1000);
 	}	
 	oval.removeClass('current');
