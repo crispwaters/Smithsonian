@@ -209,7 +209,7 @@ function animateIdeas(){
 		setTimeout("swapIdea('#page5 #option1', '#page5 #option5')", start+1);
 		setTimeout("remove()", start+=inc);
 		setTimeout("$('#page5 #ideaCenter3').fadeIn(duration)", start);
-		setTimeout("makeClickable()", start+=inc+1);
+		setTimeout("makeClickable()", start);
 	}	
 	oval.removeClass('current');
 	nextOval.addClass('current');
@@ -260,10 +260,14 @@ function pick_two(cur_option){
     if(num_picked < 2)
     {
         //Hide "I have an idea button"
+        $('.postIdea').fadeOut(duration);
+        $('#ideaCenter4').fadeOut(duration);
     }
     else if(num_picked == 2)
     {
         //Show "I have an idea button"
+        $('.postIdea').fadeIn(duration);
+        $('#ideaCenter4').fadeIn(duration);
     }
     else
     {
