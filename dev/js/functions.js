@@ -1,8 +1,6 @@
 var cur_div;
 var div_stack;
-var num_active;
 init();
-
 
 $('.start').click(function() {
 	start_click();
@@ -30,7 +28,6 @@ $('.back').click(function() {
 
 function init(){
 	cur_div = '#page1';
-	num_active = 0;
 	display_button();
 	$('.start').delay(500);
 	$('.back').delay(500);
@@ -56,10 +53,6 @@ function next_click(){
 	display_button();
 	$(cur_div).delay(500);
 	$(cur_div).fadeIn(500);
-	if(cur_div == "#page5")
-	{
-		auto_toggle();
-	}
 }
 
 function back_click(){
@@ -68,10 +61,6 @@ function back_click(){
 	display_button();
 	$(cur_div).delay(500);
 	$(cur_div).fadeIn(500);
-	if(cur_div == "#page5")
-	{
-		auto_toggle();
-	}
 }
 
 function button_click(nextPage){
@@ -98,56 +87,4 @@ function display_button(){
 		$('.next').fadeIn(500);
 	}
 }
-
-function toggle_color(id)
-{
-    if($(id).css("background") == "#777")
-    {
-        if(num_active < 2)
-        {
-            if(id == "#option1")
-                $(id).css("background", "#e51f25");
-            if(id == '#option2')
-                $(id).css("background", "#0eabe0");
-            if(id == "#option3")
-                $(id).css("background", "#52ae42");
-            if(id == '#option4')
-                $(id).css("background", "#f89c3e");
-            if(id == '#option5')
-                $(id).css("background", "#8f53a2");
-            if(id == '#option6')
-                $(id).css("background", "#fec13f");
-            
-            num_active++;
-        }    
-    }
-    else
-    {
-        $(id).css("background", "#777");
-        num_active = num_active - 1;
-    }    
-}
-
-function auto_toggle()
-{
-    var i;
-    var str;
-    for(i=1;i<8;i++)
-    {
-        if(i>1)
-        {   
-            str = (i-1)+' ';
-            $(this).delay(500);
-            toggle_color('#option' + str);
-        }
-        if(i<7)
-        {
-            str = i + ' ';
-            $(this).delay(500);
-            toggle_color('#option' + str);
-        }    
-    }
-    next_click();
-}
-
 
