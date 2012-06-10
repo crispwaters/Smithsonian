@@ -38,7 +38,11 @@ var answer_array_tourism = [
 "a 'trading spaces' renovation swap: redo two bldgs, one in each town",
 "gardens designed with historically significant plants"];
 //var num_active;
-init();
+
+$(window).load(function() {
+    init();
+    setTimeout("start_click()", 300000);
+});
 
 $('.start').click(function() {
 	start_click();
@@ -92,9 +96,7 @@ function init(){
 }
 
 function start_click(){
-	$(cur_div).fadeOut(duration);
-	init();
-	animateReset();
+	location.reload(true);
 }
 
 function next_click(){
@@ -406,18 +408,27 @@ function default_answer_selector()
     }
 }
 
+a=document.getElementById("audio");
+
+function playAudio()
+{
+    a.controls=false;
+    a.autoplay=true;
+    a.load();
+}
+
 function post_idea(idea)
 {
     if(idea == 'new_idea')
     {
-    
+        playAudio();
     }
     else
     {
         var toSend = 'message=' + $('#page6 ' + idea).text();
         $.ajax({
             type: "POST",
-            url: "postmessage.yaws",
+            url: "../postmessage.yaws",
             data: toSend,
             success: function(response) {
                 next_click();
