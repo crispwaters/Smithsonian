@@ -13,14 +13,14 @@ time, mark, audio, video {
     margin:0;
     padding:0;
     border:0;
+	-webkit-user-drag: none;
 }
 
 html {
 	background:#000;
 	overflow:none;
 	-webkit-user-select: none;
-/*	cursor:none;
-*/
+	cursor:none;
 }
 body {
 	font:30px FrutigerLTStd-Black;
