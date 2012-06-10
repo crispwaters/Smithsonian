@@ -53,6 +53,7 @@ function init(){
 function start_click(){
 	$(cur_div).fadeOut(duration);
 	init();
+	animateReset();
 }
 
 function next_click(){
@@ -67,7 +68,7 @@ function next_click(){
 	$(cur_div).fadeIn(duration);
 	if(cur_div == "#page3")
 	{
-		interval = setInterval('oAnimate()', duration);
+		setTimeout("interval = setInterval('oAnimate()', duration)", 500);
 	}
 }
 
@@ -89,6 +90,7 @@ function back_click(){
 	{
 		auto_toggle();
 	}*/
+	animateReset();
 }
 
 function button_click(nextPage){
@@ -129,14 +131,17 @@ function display_button(){
 	}
 }
 
+function animateReset(){
+	$('#page3 div.option:not(#option1)').removeClass('current');
+}
 
 function oAnimate(){
 	oval = $('div.option.current');
 	nextOval = oval.next('div.option');
-	console.log(nextOval.length);
 	if(nextOval.length === 0){
-		$('#page3 div.option').addClass('current');
 		clearInterval(interval);
+		$('#page3 div.option').addClass('current');
+		$('#page3 #option6').addClass('current');
 		setTimeout('next_click()', 1000);
 	}	
 	oval.removeClass('current');
