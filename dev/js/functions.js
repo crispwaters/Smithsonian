@@ -38,7 +38,7 @@ function init(){
 	$('.start').delay(duration);
 	$('.back').delay(duration);
 	$('.next').delay(duration);
-	var num_picked = 0;
+	num_picked = 0;
 	$('.start').delay(500);
 	$('.back').delay(500);
 	$('.next').delay(500);
@@ -60,7 +60,7 @@ function next_click(){
 	div_stack.push(cur_div);
 	var temp = cur_div + 'Next';
 	$(cur_div).fadeOut(duration);
-	var num_picked = 0;
+	num_picked = 0;
 	$(cur_div).fadeOut(500);
 	cur_div = $(temp).val();
 	display_button();
@@ -84,7 +84,7 @@ function back_click(){
 	}
 	$(cur_div).delay(500);
 	$(cur_div).fadeIn(500);
-	var num_picked = 0;
+	num_picked = 0;
 	/*
 	if(cur_div == "#page5")
 	{
