@@ -36,7 +36,7 @@ a:link {
 }
 
 /******************************Header******************************/
-#page1,#page2,#page3,#page4,#page5,#page6,#page7,#page8,#page9,
+#page1,#page2,#page3,#page4,#page5,#page6,#page6,#page8,#page9,
 #page10,#page11,#page12,#page13,#page14,#page15,#page16,#page17,#page18,#page19 {
 	position:absolute;
 	top:0px;
@@ -45,7 +45,7 @@ a:link {
 	height:100%;
 	display:none;
 }
-#page3,#page5,#page6,#page7 {
+#page3,#page5,#page6,#page6 {
 	background:url('../imgs/lines.png') no-repeat;
 	background-position:center;
 }
@@ -132,14 +132,14 @@ a:link {
 	border-radius:50%;
 	background:#777;
 }
-#page6 .option,#page7 .option {
+#page6 .option,#page6 .option {
 	font-size:25px;
 }
-#page6 .mid,#page7 .mid {
+#page6 .mid,#page6 .mid {
 	padding-top:20px;
 	height:80px;
 }
-#page6 .tall,#page7 .tall {
+#page6 .tall,#page6 .tall {
 	padding-top:0px;
 	height:100px;
 }
@@ -192,16 +192,16 @@ a:link {
 	text-align:center;
 	padding-top:30px;
 	border-radius:50%;
-	background:#777;
+	background:#ccc;
 }
-#page7 .subOption {
+#page6 .subOption {
 	font-size:16px;
 }
-#page7 .subOption.mid {
+#page6 .subOption.mid {
 	padding-top:20px;
 	height:60px;
 }
-#page7 .subOption.tall {
+#page6 .subOption.tall {
 	padding-top:10px;
 	height:70px;
 }
@@ -211,17 +211,19 @@ a:link {
 }
 #option1Sub2 {
 	left:180px;
-	bottom:500px;
+	bottom:520px;
 }
 #option2Sub1 {
 	left:400px;
 	bottom:740px;
 }
 #option2Sub2 {
-	left:480px;
+	left:460px;
 	bottom:820px;
 }
 #option2Sub3 {
+	left:600px;
+	bottom:840px;
 }
 #option3Sub1 {
 }
@@ -231,7 +233,7 @@ a:link {
 }
 #option4Sub1 {
 	right:180px;
-	bottom:500px;
+	bottom:520px;
 }
 #option4Sub2 {
 	right:180px;
