@@ -166,7 +166,7 @@ function display_button(){
 		$('.back').fadeOut(duration);
 		$('.next').fadeOut(duration);
 	}*/
-	if(cur_div == '#page1' || cur_div == '#page3' || cur_div == '#page7' || cur_dive == '#page8'){
+	if(cur_div == '#page1' || cur_div == '#page3' || cur_div == '#page7' || cur_div == '#page8'){
 		$('.start').fadeOut(duration);
 		$('.back').fadeOut(duration);
 		$('.next').fadeOut(duration);
