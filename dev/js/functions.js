@@ -193,13 +193,20 @@ function animateIdeas(){
 		clearInterval(ideaInterval);
 		setTimeout("$('#page5 div.option').addClass('current')", 1);
 		setTimeout("$('#page5 div.option').removeClass('current')", 1000);
-		setTimeout("$('#page5 div.subOption').fadeIn(duration)", 1500);;
+		setTimeout("$('#page5 div.subOption').fadeIn(duration)", 1500);
+		setTimeout("makeClickable()", 1501);
 	}	
 	oval.removeClass('current');
 	nextOval.addClass('current');
 }
 
 function makeClickable(){
+    $('#page5 #option1').attr("onclick", "pick_two('#page5 #option1')");
+    $('#page5 #option2').attr("onclick", "pick_two('#page5 #option2')");
+    $('#page5 #option3').attr("onclick", "pick_two('#page5 #option3')");
+    $('#page5 #option4').attr("onclick", "pick_two('#page5 #option4')");
+    $('#page5 #option5').attr("onclick", "pick_two('#page5 #option5')");
+    $('#page5 #option6').attr("onclick", "pick_two('#page5 #option6')");
 }
 	
 /*
