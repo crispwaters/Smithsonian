@@ -144,6 +144,13 @@ a:link {
 #ideaCenter1 h1,#ideaCenter2 h1,#ideaCenter3 h1,#ideaCenter4 h1 {
 	color:#000;
 }
+.example h1 {
+	padding-top:20px;
+	font-size:40px;
+}
+.pick2 h1 {
+	padding-top:80px;
+}
 #centerInfoYellow {
 	position:absolute;
 	bottom:350px;
