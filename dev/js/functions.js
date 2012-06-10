@@ -41,7 +41,7 @@ var answer_array_tourism = [
 
 $(window).load(function() {
     init();
-    setTimeout("start_click()", 300000);
+    //setTimeout("start_click()", 300000);
 });
 
 $('.start').click(function() {
@@ -108,6 +108,10 @@ function next_click(){
 	display_button();
 	$(cur_div).delay(duration);
 	$(cur_div).fadeIn(duration);
+	if(cur_div == "#page2")
+	{
+		setTimeout("start_click()", 300000);
+	}
 	if(cur_div == "#page3")
 	{
 		setTimeout("interval = setInterval('oAnimate()', duration)", duration);
