@@ -194,6 +194,7 @@ function animateIdeas(){
 		setTimeout("$('#page5 .option').addClass('current')", 1);
 		setTimeout("$('#page5 .option').removeClass('current')", 1000);
 		setTimeout("$('#page5 .subOption').fadeIn(duration)", 2000);
+		setTimeout("makeClickable()", 1501);
 		setTimeout("$('#page5 #ideaCenter1').fadeIn(duration)", 2000);
 		setTimeout("$('#page5 #ideaCenter2').fadeIn(duration)", 3000);
 	}	
@@ -202,6 +203,12 @@ function animateIdeas(){
 }
 
 function makeClickable(){
+    $('#page5 #option1').attr("onclick", "pick_two('#page5 #option1')");
+    $('#page5 #option2').attr("onclick", "pick_two('#page5 #option2')");
+    $('#page5 #option3').attr("onclick", "pick_two('#page5 #option3')");
+    $('#page5 #option4').attr("onclick", "pick_two('#page5 #option4')");
+    $('#page5 #option5').attr("onclick", "pick_two('#page5 #option5')");
+    $('#page5 #option6').attr("onclick", "pick_two('#page5 #option6')");
 }
 	
 /*
