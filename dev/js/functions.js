@@ -152,21 +152,28 @@ function display_button(){
 		$('.next').fadeOut(duration);
 		$('.postIdea').fadeOut(duration);
 	}
-	else if(cur_div == '#page5' || cur_div == '#page6'){
+	else if(cur_div == '#page5')
+	{
+	    if(num_picked < 2)
+	    {
+	        $('.start').fadeOut(duration);
+		    $('.back').fadeOut(duration);
+		    $('.next').fadeOut(duration);
+		}
+		if(num_picked == 2)
+		{
+		    $('.postIdea').fadeIn(duration);
+		}
+	}
+	else if(cur_div == '#page6'){
 	    $('.start').delay(duration);
 		$('.back').delay(duration);
 		//$('.next').delay(duration);
 		$('.start').fadeIn(duration);
 		$('.back').fadeIn(duration);
 		$('.next').fadeOut(duration);
-		if(cur_div == '#page5' && num_picked == 2)
-		{
-		    $('.postIdea').fadeIn(duration);
-		}
-		else
-		{
-		    $('.postIdea').fadeOut(duration);
-		}
+	    $('.postIdea').fadeOut(duration);
+
 	}	
 	else{
 		$('.start').delay(duration);
@@ -243,6 +250,9 @@ function makeClickable(){
     $('#page5 #option4').attr("onclick", "pick_two('#page5 #option4')");
     $('#page5 #option5').attr("onclick", "pick_two('#page5 #option5')");
     $('#page5 #option6').attr("onclick", "pick_two('#page5 #option6')");
+    $('.start').fadeIn(duration);
+	$('.back').fadeIn(duration);
+    
 }
 
 function makeUnclickable(){
@@ -252,6 +262,7 @@ function makeUnclickable(){
     $('#page5 #option4').attr("onclick", "");
     $('#page5 #option5').attr("onclick", "");
     $('#page5 #option6').attr("onclick", "");
+    num_picked = 0;
 }
 	
 /*
