@@ -35,13 +35,13 @@ var answer_array_tourism = [
 "bike trail map showing all towns along a route and their main attractions",
 "murals on town buildings displaying local attractions",
 "'this could be the view from your room!' advertising",
-"a 'trading spaces' renovation swap: redo two bldgs, one in each town",
+"a 'trading spaces' renovation swap: redo two buildings, one in each town",
 "gardens designed with historically significant plants"];
 //var num_active;
 
 $(window).load(function() {
     init();
-    setTimeout("start_click()", 300000);
+    //setTimeout("start_click()", 300000);
 });
 
 $('.start').click(function() {
@@ -108,6 +108,10 @@ function next_click(){
 	display_button();
 	$(cur_div).delay(duration);
 	$(cur_div).fadeIn(duration);
+	if(cur_div == "#page2")
+	{
+		setTimeout("start_click()", 300000);
+	}
 	if(cur_div == "#page3")
 	{
 		setTimeout("interval = setInterval('oAnimate()', duration)", duration);
@@ -162,7 +166,7 @@ function display_button(){
 		$('.back').fadeOut(duration);
 		$('.next').fadeOut(duration);
 	}*/
-	if(cur_div == '#page1' || cur_div == '#page3'){
+	if(cur_div == '#page1' || cur_div == '#page3' || cur_div == '#page7' || cur_div == '#page8'){
 		$('.start').fadeOut(duration);
 		$('.back').fadeOut(duration);
 		$('.next').fadeOut(duration);
@@ -184,10 +188,10 @@ function display_button(){
 	else if(cur_div == '#page6'){
 	    $('.start').delay(duration);
 		$('.back').delay(duration);
-		$('.next').delay(duration);
+		//$('.next').delay(duration);
 		$('.start').fadeIn(duration);
 		$('.back').fadeIn(duration);
-		$('.next').fadeIn(duration);
+		//$('.next').fadeIn(duration);
 	    $('.postIdea').fadeOut(duration);
 
 	}	
@@ -472,6 +476,14 @@ function post_idea(idea)
     if(idea == 'new_idea')
     {
         playAudio();
+        div_stack.push(cur_div);
+		$(cur_div).fadeOut(duration);
+		$(cur_div).fadeOut(duration);
+		cur_div = '#page8';
+		display_button();
+		$(cur_div).delay(duration);
+		$(cur_div).fadeIn(duration);
+		setTimeout('start_click()', 5000);
     }
     else
     {
