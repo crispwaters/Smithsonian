@@ -20,7 +20,8 @@ html {
 	background:#000;
 	overflow:hidden;
 	-webkit-user-select: none;
-	cursor:none;
+	/*cursor:none;
+*/
 }
 body {
 	font:30px FrutigerLTStd-Black;
@@ -225,10 +226,16 @@ a:link {
 	bottom:840px;
 }
 #option3Sub1 {
+	right:640px;
+	bottom:840px;
 }
 #option3Sub2 {
+	right:500px;
+	bottom:820px;
 }
 #option3Sub3 {
+	right:440px;
+	bottom:740px;
 }
 #option4Sub1 {
 	right:180px;
