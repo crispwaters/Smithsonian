@@ -71,6 +71,7 @@ $('.back').click(function() {
 	return false;
 });
 
+
 function init(){
 	cur_div = '#page1';
 	display_button();
@@ -399,6 +400,30 @@ function default_answer_selector()
             $('#page6 #good_idea2').text(answer_array_tourism[29]);
         } 
     }
+}
+
+function post_idea(idea)
+{
+    if(idea == 'new_idea')
+    {
+    
+    }
+    else
+    {
+        var toSend = 'message=' + $('#page6 ' + idea).text();
+        $.ajax({
+            type: "POST",
+            url: "postmessage.yaws",
+            data: toSend,
+            success: function(response) {
+            
+            },
+            error: function(msg) {
+            
+            }
+        });
+    }
+
 }
 
 
