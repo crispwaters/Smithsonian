@@ -141,8 +141,7 @@ function oAnimate(){
 	if(nextOval.length === 0){
 	    oval.removeClass('current');
 		clearInterval(interval);
-		setTimeout("$('#page3 div.option').addClass('current')", 500);
-		//$('#page3 #option6').addClass('current');
+		setTimeout("$('#page3 div.option').addClass('current')", 1);
 		setTimeout('next_click()', 1000);
 	}	
 	oval.removeClass('current');
