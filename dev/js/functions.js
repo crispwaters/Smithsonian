@@ -6,6 +6,37 @@ var interval;
 var ideaInterval;
 var duration = '500';
 var num_picked;
+var answer_array_tourism = [
+"hotel and shopping weekend package deals",
+"regional incentive coupons",
+"weekend camping trip hosted by local historian storyteller",
+"treasure hunt to find architectural details on local buildings",
+"progressive dinner to highlight local items at different restaurants",
+"social media advertising to show regional specialties",
+"dinner train/riverboat dining experience featuring local foods",
+"seasonal wine and meal pairings",
+"murals on town buildings displaying local attractions",
+"embedded directional signs in sidewalk to direct foot traffic to nearby attractions",
+"local food and beverage taste-testing contest",
+"bus tour to all of the quilt stores in an area",
+"regional cuisine harvest festivals",
+"no sales tax at locally-owned businesses",
+"local foods and crafts markets",
+"regional incentive coupons",
+"increase nighttime shopping with unified, decorative lighting system",
+"add facade designs to create visually coherent shopping community",
+"rails-to-trails program linking nearby towns",
+"walking tours for each season's highlights",
+"stage outdoor/indoor competitive games between two or more towns",
+"reenactment of local historical events",
+"town cleanup day - whoever finds the most trash wins!",
+"walking tours of neighborhoods highlighting unique architectural details",
+"swap local historians for a weekend to learn about nearby towns",
+"bike trail map showing all towns along a route and their main attractions",
+"murals on town buildings displaying local attractions",
+"'this could be the view from your room!' advertising",
+"a 'trading spaces' renovation swap: redo two bldgs, one in each town",
+"gardens designed with historically significant plants"];
 //var num_active;
 init();
 
@@ -137,6 +168,8 @@ function display_button(){
 
 function animateReset(){
 	$('#page3 div.option:not(#option1)').removeClass('current');
+	$('#page6 div.option').removeClass('current');
+	num_picked = 0;
 }
 
 function oAnimate(){
@@ -200,6 +233,100 @@ function pick_two(cur_option){
     else
     {
         //Should never reach
+    }
+}
+
+function default_answer_selector()
+{
+    if($('#page5 #option1').hasClass('current'))
+    {
+        if($('#page5 #option2').hasClass('current'))
+        {
+            $('#page6 #good_idea1').text(answer_array_tourism[0]);
+            $('#page6 #good_idea2').text(answer_array_tourism[1]);
+        }
+        else if($('#page5 #option3').hasClass('current'))
+        {
+            $('#page6 #good_idea1').text(answer_array_tourism[2]);
+            $('#page6 #good_idea2').text(answer_array_tourism[3]);
+        }
+        else if($('#page5 #option4').hasClass('current'))
+        {
+            $('#page6 #good_idea1').text(answer_array_tourism[4]);
+            $('#page6 #good_idea2').text(answer_array_tourism[5]);
+        }
+        else if($('#page5 #option5').hasClass('current'))
+        {
+            $('#page6 #good_idea1').text(answer_array_tourism[6]);
+            $('#page6 #good_idea2').text(answer_array_tourism[7]);
+        }
+        else if($('#page5 #option6').hasClass('current'))
+        {
+            $('#page6 #good_idea1').text(answer_array_tourism[8]);
+            $('#page6 #good_idea2').text(answer_array_tourism[9]);
+        }
+    }
+    else if($('#page5 #option2').hasClass('current'))
+    {
+        if($('#page5 #option3').hasClass('current'))
+        {
+            $('#page6 #good_idea1').text(answer_array_tourism[10]);
+            $('#page6 #good_idea2').text(answer_array_tourism[11]);
+        }
+        else if($('#page5 #option4').hasClass('current'))
+        {
+            $('#page6 #good_idea1').text(answer_array_tourism[12]);
+            $('#page6 #good_idea2').text(answer_array_tourism[13]);
+        }
+        else if($('#page5 #option5').hasClass('current'))
+        {
+            $('#page6 #good_idea1').text(answer_array_tourism[14]);
+            $('#page6 #good_idea2').text(answer_array_tourism[15]);
+        }
+        else if($('#page5 #option6').hasClass('current'))
+        {
+            $('#page6 #good_idea1').text(answer_array_tourism[16]);
+            $('#page6 #good_idea2').text(answer_array_tourism[17]);
+        }    
+    }
+    else if($('#page5 #option3').hasClass('current'))
+    {
+        if($('#page5 #option4').hasClass('current'))
+        {
+            $('#page6 #good_idea1').text(answer_array_tourism[18]);
+            $('#page6 #good_idea2').text(answer_array_tourism[19]);
+        }
+        else if($('#page5 #option5').hasClass('current'))
+        {
+            $('#page6 #good_idea1').text(answer_array_tourism[20]);
+            $('#page6 #good_idea2').text(answer_array_tourism[21]);
+        }
+        else if($('#page5 #option6').hasClass('current'))
+        {
+            $('#page6 #good_idea1').text(answer_array_tourism[22]);
+            $('#page6 #good_idea2').text(answer_array_tourism[23]);
+        }    
+    }
+    else if($('#page5 #option4').hasClass('current'))
+    {
+        if($('#page5 #option5').hasClass('current'))
+        {
+            $('#page6 #good_idea1').text(answer_array_tourism[24]);
+            $('#page6 #good_idea2').text(answer_array_tourism[25]);
+        }
+        else if($('#page5 #option6').hasClass('current'))
+        {
+            $('#page6 #good_idea1').text(answer_array_tourism[26]);
+            $('#page6 #good_idea2').text(answer_array_tourism[27]);
+        } 
+    }
+    else if($('#page5 #option5').hasClass('current'))
+    {
+        if($('#page5 #option6').hasClass('current'))
+        {
+            $('#page6 #good_idea1').text(answer_array_tourism[28]);
+            $('#page6 #good_idea2').text(answer_array_tourism[29]);
+        } 
     }
 }
 
