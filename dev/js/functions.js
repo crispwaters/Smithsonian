@@ -100,7 +100,6 @@ function next_click(){
 	div_stack.push(cur_div);
 	var temp = cur_div + 'Next';
 	$(cur_div).fadeOut(duration);
-	num_picked = 0;
 	$(cur_div).fadeOut(duration);
 	cur_div = $(temp).val();
 	display_button();
@@ -126,15 +125,10 @@ function back_click(){
 	{
 		interval = setInterval('oAnimate()', duration);
 	}
-	else if(cur_div == "#page5")
-	{
-		ideaInterval = setInterval('animateIdeas()', 100);
-	}
 	$(cur_div).delay(duration);
 	$(cur_div).fadeIn(duration);
-	num_picked = 0;
 	animateReset();
-	makeUnclickable();
+	if(cur_div != "#page5") makeUnclickable();
 }
 
 function button_click(nextPage){
@@ -165,7 +159,14 @@ function display_button(){
 		$('.start').fadeIn(duration);
 		$('.back').fadeIn(duration);
 		$('.next').fadeOut(duration);
-		$('.postIdea').fadeOut(duration);
+		if(cur_div == '#page5' && num_picked == 2)
+		{
+		    $('.postIdea').fadeIn(duration);
+		}
+		else
+		{
+		    $('.postIdea').fadeOut(duration);
+		}
 	}	
 	else{
 		$('.start').delay(duration);
@@ -181,7 +182,6 @@ function display_button(){
 function animateReset(){
 	$('#page3 div.option:not(#option1)').removeClass('current');
 	$('#page6 div.option').removeClass('current');
-	num_picked = 0;
 }
 
 function oAnimate(){
