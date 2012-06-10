@@ -71,6 +71,7 @@ $('.back').click(function() {
 	return false;
 });
 
+
 function init(){
 	cur_div = '#page7';
 	display_button();
@@ -168,10 +169,10 @@ function display_button(){
 	else if(cur_div == '#page6'){
 	    $('.start').delay(duration);
 		$('.back').delay(duration);
-		//$('.next').delay(duration);
+		$('.next').delay(duration);
 		$('.start').fadeIn(duration);
 		$('.back').fadeIn(duration);
-		$('.next').fadeOut(duration);
+		$('.next').fadeIn(duration);
 	    $('.postIdea').fadeOut(duration);
 
 	}	
@@ -399,6 +400,30 @@ function default_answer_selector()
             $('#page6 #good_idea2').text(answer_array_tourism[29]);
         } 
     }
+}
+
+function post_idea(idea)
+{
+    if(idea == 'new_idea')
+    {
+    
+    }
+    else
+    {
+        var toSend = 'message=' + $('#page6 ' + idea).text();
+        $.ajax({
+            type: "POST",
+            url: "postmessage.yaws",
+            data: toSend,
+            success: function(response) {
+                next_page();
+            },
+            error: function(msg) {
+                alert("A server error occured, please try again");
+            }
+        });
+    }
+
 }
 
 
