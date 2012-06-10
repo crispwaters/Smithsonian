@@ -191,9 +191,11 @@ function animateIdeas(){
 	if(nextOval.length === 0){
 	    oval.removeClass('current');
 		clearInterval(ideaInterval);
-		setTimeout("$('#page5 div.option').addClass('current')", 1);
-		setTimeout("$('#page5 div.option').removeClass('current')", 1000);
-		setTimeout("$('#page5 div.subOption').fadeIn(duration)", 1500);;
+		setTimeout("$('#page5 .option').addClass('current')", 1);
+		setTimeout("$('#page5 .option').removeClass('current')", 1000);
+		setTimeout("$('#page5 .subOption').fadeIn(duration)", 2000);
+		setTimeout("$('#page5 #ideaCenter1').fadeIn(duration)", 2000);
+		setTimeout("$('#page5 #ideaCenter2').fadeIn(duration)", 3000);
 	}	
 	oval.removeClass('current');
 	nextOval.addClass('current');
