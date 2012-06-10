@@ -37,8 +37,12 @@ h2 {
 	text-align:center;
 	color:#e51f25;
 }
+#page8 h2 {
+	font-size:70px;
+}
+
 a:link {
-	border:0px;
+border:0px;
 }
 
 /******************************Header******************************/
@@ -50,7 +54,7 @@ a:link {
 	height:100%;
 	display:none;
 }
-#page3,#page5,#page7 {
+#page3,#page5,#page7,#page8 {
 	background:url('../imgs/lines.png') no-repeat;
 	background-position:center;
 }
@@ -199,6 +203,10 @@ a:link {
 	color:#000;
 	font-size:90px;
 }
+#page8 #endBubble h1 {
+	color:#000;
+	font-size:70px;
+}
 
 /******************************Web Layout******************************/
 .webCenterCircle {
@@ -257,14 +265,14 @@ a:link {
 #option6.current{
 	background:#fec13f;
 }
-#page5 .option,#page7 .option {
+#page5 .option,#page7 .option,#page8 .option {
 	font-size:25px;
 }
-#page5 .mid,#page7 .mid {
+#page5 .mid,#page7 .mid,#page8 .mid {
 	padding-top:20px;
 	height:80px;
 }
-#page5 .tall,#page7 .tall {
+#page5 .tall,#page7 .tall,#page8 .tall {
 	padding-top:0px;
 	height:100px;
 }
@@ -304,17 +312,17 @@ a:link {
 	background:#777;
 	display:none;
 }
-#page7 .subOption {
+#page7 .subOption,#page8 .subOption {
 	display:block;
 }
-#page5 .subOption,#page7 .subOption {
+#page5 .subOption,#page7 .subOption,#page8 .subOption {
 	font-size:16px;
 }
-#page5 .subOption.mid,#page7 .subOption.mid {
+#page5 .subOption.mid,#page7 .subOption.mid,#page8 .subOption.mid {
 	padding-top:20px;
 	height:60px;
 }
-#page5 .subOption.tall,#page7 .subOption.tall {
+#page5 .subOption.tall,#page7 .subOption.tall,#page8 .subOption.tall {
 	padding-top:10px;
 	height:70px;
 }

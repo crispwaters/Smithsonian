@@ -140,6 +140,11 @@ function back_click(){
 	$(cur_div).fadeIn(duration);
 	animateReset();
 	if(cur_div != "#page5") makeUnclickable();
+	if(cur_div == "#page5")
+	{
+		$('#page6 #good_idea1').removeClass();
+		$('#page6 #good_idea2').removeClass();
+	}
 }
 
 function button_click(nextPage){
@@ -318,33 +323,64 @@ function pick_two(cur_option){
     }
 }
 
+function styler(first,second){
+	var $first = $('#page6 #good_idea1');
+	var $second = $('#page6 #good_idea2');
+	
+	/* First idea */
+	if(answer_array_tourism[first].length <= 32){
+		$first.addClass('shortIdea');	
+	}
+	if(answer_array_tourism[first].length > 32 && answer_array_tourism[first].length <= 55){
+		$first.addClass('midIdea');
+	}
+	if(answer_array_tourism[first].length > 55){
+		$first.addClass('tallIdea');
+	}
+	/* Second idea */
+	if(answer_array_tourism[second].length <= 32){
+		$second.addClass('shortIdea');	
+	}
+	if(answer_array_tourism[second].length > 32 && answer_array_tourism[second].length <= 55){
+		$second.addClass('midIdea');
+	}
+	if(answer_array_tourism[second].length > 55){
+		$second.addClass('tallIdea');
+	}
+}
+	
 function default_answer_selector()
-{
-    if($('#page5 #option1').hasClass('current'))
+{	
+   if($('#page5 #option1').hasClass('current'))
     {
         if($('#page5 #option2').hasClass('current'))
         {
+			styler(0,1);
             $('#page6 #good_idea1').text(answer_array_tourism[0]);
             $('#page6 #good_idea2').text(answer_array_tourism[1]);
         }
         else if($('#page5 #option3').hasClass('current'))
         {
-            $('#page6 #good_idea1').text(answer_array_tourism[2]);
+		styler(2,3);
+          $('#page6 #good_idea1').text(answer_array_tourism[2]);
             $('#page6 #good_idea2').text(answer_array_tourism[3]);
         }
         else if($('#page5 #option4').hasClass('current'))
         {
-            $('#page6 #good_idea1').text(answer_array_tourism[4]);
+ 		styler(4,5);
+           $('#page6 #good_idea1').text(answer_array_tourism[4]);
             $('#page6 #good_idea2').text(answer_array_tourism[5]);
         }
         else if($('#page5 #option5').hasClass('current'))
         {
-            $('#page6 #good_idea1').text(answer_array_tourism[6]);
+   		styler(6,7);
+         $('#page6 #good_idea1').text(answer_array_tourism[6]);
             $('#page6 #good_idea2').text(answer_array_tourism[7]);
         }
         else if($('#page5 #option6').hasClass('current'))
         {
-            $('#page6 #good_idea1').text(answer_array_tourism[8]);
+ 		styler(8,9);
+           $('#page6 #good_idea1').text(answer_array_tourism[8]);
             $('#page6 #good_idea2').text(answer_array_tourism[9]);
         }
     }
@@ -352,22 +388,26 @@ function default_answer_selector()
     {
         if($('#page5 #option3').hasClass('current'))
         {
+		styler(10,11);
             $('#page6 #good_idea1').text(answer_array_tourism[10]);
             $('#page6 #good_idea2').text(answer_array_tourism[11]);
         }
         else if($('#page5 #option4').hasClass('current'))
         {
+		styler(12,13);
             $('#page6 #good_idea1').text(answer_array_tourism[12]);
             $('#page6 #good_idea2').text(answer_array_tourism[13]);
         }
         else if($('#page5 #option5').hasClass('current'))
         {
-            $('#page6 #good_idea1').text(answer_array_tourism[14]);
+ 		styler(14,15);
+           $('#page6 #good_idea1').text(answer_array_tourism[14]);
             $('#page6 #good_idea2').text(answer_array_tourism[15]);
         }
         else if($('#page5 #option6').hasClass('current'))
         {
-            $('#page6 #good_idea1').text(answer_array_tourism[16]);
+ 		styler(16,17);
+           $('#page6 #good_idea1').text(answer_array_tourism[16]);
             $('#page6 #good_idea2').text(answer_array_tourism[17]);
         }    
     }
@@ -375,16 +415,19 @@ function default_answer_selector()
     {
         if($('#page5 #option4').hasClass('current'))
         {
+		styler(18,19);
             $('#page6 #good_idea1').text(answer_array_tourism[18]);
             $('#page6 #good_idea2').text(answer_array_tourism[19]);
         }
         else if($('#page5 #option5').hasClass('current'))
         {
+		styler(20,21);
             $('#page6 #good_idea1').text(answer_array_tourism[20]);
             $('#page6 #good_idea2').text(answer_array_tourism[21]);
         }
         else if($('#page5 #option6').hasClass('current'))
         {
+		styler(22,23);
             $('#page6 #good_idea1').text(answer_array_tourism[22]);
             $('#page6 #good_idea2').text(answer_array_tourism[23]);
         }    
@@ -393,11 +436,13 @@ function default_answer_selector()
     {
         if($('#page5 #option5').hasClass('current'))
         {
+		styler(24,25);
             $('#page6 #good_idea1').text(answer_array_tourism[24]);
             $('#page6 #good_idea2').text(answer_array_tourism[25]);
         }
         else if($('#page5 #option6').hasClass('current'))
         {
+		styler(26,27);
             $('#page6 #good_idea1').text(answer_array_tourism[26]);
             $('#page6 #good_idea2').text(answer_array_tourism[27]);
         } 
@@ -406,7 +451,8 @@ function default_answer_selector()
     {
         if($('#page5 #option6').hasClass('current'))
         {
-            $('#page6 #good_idea1').text(answer_array_tourism[28]);
+ 		styler(28,29);
+           $('#page6 #good_idea1').text(answer_array_tourism[28]);
             $('#page6 #good_idea2').text(answer_array_tourism[29]);
         } 
     }

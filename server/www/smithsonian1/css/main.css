@@ -84,9 +84,9 @@ a:link {
 	width:300px;
 	padding:50px;
 	border-radius:50%;
+	text-align:center;
 }
 .ideaOval h1 {
-	text-align:center;
 	font-size:30px;
 	color:#000;
 }
@@ -414,6 +414,14 @@ a:link {
 	padding-top:40px;
 	display:none;
 }	
-	
-	
-	
+.shortIdea {
+	font-size:40px;
+}
+.midIdea {
+	font-size:35px;
+}
+.tallIdea {
+}
+
+
+
