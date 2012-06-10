@@ -83,6 +83,7 @@ a:link {
 .ideaOval h1 {
 	text-align:center;
 	font-size:30px;
+	color:#000;
 }
 #page6 .tall {
 	padding:0;
@@ -97,6 +98,8 @@ a:link {
 	background:#31b44b;
 }
 #idea3 {
+	padding-top:50px;
+	height:150px;
 	right:250px;
 	background:#faed3c;
 }
@@ -114,9 +117,9 @@ a:link {
 	bottom:300px;
 	height:200px;
 	width:400px;
-	padding:50px 0 0 0;
+	padding-top:50px;
 	text-align:center;
-	font-size:35px;
+	font-size:40px;
 	border-radius:50%;
 }
 #startGreen {
@@ -124,6 +127,7 @@ a:link {
 	background:#31b44b;
 }
 #startYellow {
+	padding-top:40px;
 	right:400px;
 	background:#faed3c;
 }
@@ -151,22 +155,29 @@ a:link {
 .pick2 h1 {
 	padding-top:80px;
 }
+.yourTurn h1 {
+	font-size:60px;
+}
 #centerInfoYellow {
 	position:absolute;
 	bottom:350px;
 	right:550px;
 	height:300px;
 	width:600px;
-	padding-top:50px;
+	padding-top:20px;
 	text-align:center;
 	background:#faed3c;
 	border-radius:50%;
 }
 #centerInfoYellow h1 {
 	color:#000;
+	font-size:55px;
+}
+#page2 #centerInfoYellow h1 {
+	font-size:65px;
 }
 #page2 #centerInfoYellow {
-	padding-top:70px;
+	padding-top:30px;
 	height:280px;
 }
 
@@ -373,11 +384,12 @@ a:link {
 	position:absolute;
 	right:0px;
 	bottom:0px;
-	height:150px;
+	height:110px;
 	width:150px;
 	border-radius:50%;
 	background:#52ae42;
 	text-align:center;
+	padding-top:40px;
 	display:none;
 }	
 	
