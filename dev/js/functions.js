@@ -77,7 +77,7 @@ $('.back').click(function() {
 
 
 function init(){
-	cur_div = '#page8';
+	cur_div = '#page1';
 	display_button();
 	$('.start').delay(duration);
 	$('.back').delay(duration);
