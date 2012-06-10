@@ -64,6 +64,43 @@ a:link {
 }
 
 /******************************startGreen/startYellow******************************/
+#ideaButtonHead {
+	position:absolute;
+	width:100%;
+	text-align:center;
+	left:0px;
+	top:300px;
+}
+.ideaOval {
+	position:absolute;
+	top:450px;
+	height:200px;
+	width:350px;
+	padding:50px 0 0 0;
+	border-radius:50%;
+}
+.ideaOval h1 {
+	text-align:center;
+	font-size:30px;
+}
+#page7 .tall {
+	padding:0;
+	height:250px;
+}
+#idea1 {
+	left:250px;
+	background:#31b44b;
+}
+#idea2 {
+	left:665px;
+	background:#31b44b;
+}
+#idea3 {
+	right:250px;
+	background:#faed3c;
+}
+
+/******************************startGreen/startYellow******************************/
 #startButtonHead {
 	position:absolute;
 	width:100%;
@@ -123,6 +160,22 @@ a:link {
 	text-align:center;
 	font-size:170px;
 }
+#webCenterOval {
+	position:absolute;
+	bottom:350px;
+	right:550px;
+	height:250px;
+	width:600px;
+	padding-top:100px;
+	text-align:center;
+	background:#faed3c;
+	border-radius:50%;
+}
+#webCenterOval h1 {
+	color:#000;
+	font-size:60px;
+}
+
 .option {
 	position:absolute;
 	width:180px;
@@ -179,7 +232,7 @@ a:link {
 	background:#8f53a2;
 }
 #option6 {
-	left:520px;
+	left:530px;
 	bottom:220px;
 }
 #page5 #option6 {
@@ -246,16 +299,28 @@ a:link {
 	bottom:400px;
 }
 #option5Sub1 {
+	right:440px;
+	top:740px;
 }
 #option5Sub2 {
+	right:500px;
+	top:820px;
 }
 #option5Sub3 {
+	right:640px;
+	top:840px;
 }
 #option6Sub1 {
+	left:600px;
+	top:840px;
 }
 #option6Sub2 {
+	left:460px;
+	top:820px;
 }
 #option6Sub3 {
+	left:400px;
+	top:740px;
 }
 
 
