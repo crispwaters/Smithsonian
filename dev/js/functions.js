@@ -72,7 +72,7 @@ $('.back').click(function() {
 });
 
 function init(){
-	cur_div = '#page1';
+	cur_div = '#page7';
 	display_button();
 	$('.start').delay(duration);
 	$('.back').delay(duration);

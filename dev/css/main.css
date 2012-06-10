@@ -32,9 +32,10 @@ h1 {
 	text-align:center;
 }
 h2 {
-	font-size:55px;
+	font-size:90px;
 	color:#000;
 	text-align:center;
+	color:#e51f25;
 }
 a:link {
 	border:0px;
@@ -184,18 +185,19 @@ a:link {
 }
 #endBubble {
 	position:absolute;
-	top:300px;
-	left:500px;
-	height:500px;
-	width:800px;
-	padding-top:20px;
+	top:250px;
+	left:410px;
+	height:450px;
+	width:850px;
+	padding-top:100px;
 	text-align:center;
 	background:#faed3c;
 	border-radius:50%;
+	z-index:100;
 }
 #endBubble h1 {
 	color:#000;
-	font-size:55px;
+	font-size:90px;
 }
 
 /******************************Web Layout******************************/
