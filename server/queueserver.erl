@@ -39,8 +39,7 @@ handle_cast({post_message, Message}, Queue) ->
     Empty = queue:is_empty(Queue),
     if
 	Empty ->
-	    {ok, TRef} = timer:apply_interval(46000, queueserver, dequeue, []),
-	    put(timer, TRef);
+	    timer:apply_after(timer_formula(Message), queueserver, dequeue, []);
 	true ->
 	    ok
     end,
@@ -49,13 +48,16 @@ handle_cast(dequeue, Queue) ->
     Empty = queue:is_empty(queue:drop(Queue)),
     if
 	Empty ->
-	    timer:cancel(get(timer));
+	    ok;
 	true ->
-	    ok
+	    timer:apply_after(timer_formula(queue:get(queue:drop(Queue))), queueserver, dequeue, [])
     end,
     {noreply, queue:drop(Queue)};
 handle_cast(stop, Queue) ->
     {stop, "'stop' was cast", Queue}.
 
 terminate(_, _) ->
-    timer:cancel(get(timer)).
+    ok.
+
+timer_formula(Message) ->
+    37000 + string:len(Message)*360.
