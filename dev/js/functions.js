@@ -116,6 +116,10 @@ function next_click(){
 	{
 		setTimeout("ideaInterval = setInterval('animateIdeas()', 1000)", duration);
 	}
+	else if(cur_div == "#page6")
+	{
+	    default_answer_selector();
+	}
 	else if(cur_div == "#page7")
 	{
 		setTimeout('start_click()', 5000);
