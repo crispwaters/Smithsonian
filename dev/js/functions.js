@@ -87,6 +87,7 @@ function init(){
 	div_stack = new Array;
 	$(cur_div).delay(duration);
 	$(cur_div).fadeIn(duration);
+	makeUnclickable();
 }
 
 function start_click(){
@@ -133,6 +134,7 @@ function back_click(){
 	$(cur_div).fadeIn(duration);
 	num_picked = 0;
 	animateReset();
+	makeUnclickable();
 }
 
 function button_click(nextPage){
@@ -150,10 +152,11 @@ function display_button(){
 		$('.back').fadeOut(duration);
 		$('.next').fadeOut(duration);
 	}*/
-	if(cur_div == '#page1' || cur_div == '#page3' || cur_div == '#page5' || cur_div == '#page6'){
+	if(cur_div == '#page1' || cur_div == '#page3' || cur_div == '#page5'){
 		$('.start').fadeOut(duration);
 		$('.back').fadeOut(duration);
 		$('.next').fadeOut(duration);
+		$('.postIdea').fadeOut(duration);
 	}
 	else if(cur_div == '#page5'){
 	    $('.start').delay(duration);
@@ -205,7 +208,7 @@ function animateIdeas(){
 		setTimeout("$('#page5 .subOption').fadeIn(duration)", 2000);
 		setTimeout("$('#page5 #ideaCenter1').fadeIn(duration)", 2000);
 		setTimeout("$('#page5 #ideaCenter2').fadeIn(duration)", start);
-		setTimeout("swapIdea('#page5 #option2', '#page5 #option4')", start+=inc);
+		setTimeout("swapIdea('#page5 #option2', '#page5 #option4')", start+=inc+1000);
 		setTimeout("remove()", start+=inc);
 		setTimeout("swapIdea('#page5 #option1', '#page5 #option3')", start+1);
 		setTimeout("remove()", start+=inc);
@@ -238,6 +241,15 @@ function makeClickable(){
     $('#page5 #option4').attr("onclick", "pick_two('#page5 #option4')");
     $('#page5 #option5').attr("onclick", "pick_two('#page5 #option5')");
     $('#page5 #option6').attr("onclick", "pick_two('#page5 #option6')");
+}
+
+function makeUnclickable(){
+    $('#page5 #option1').attr("onclick", "");
+    $('#page5 #option2').attr("onclick", "");
+    $('#page5 #option3').attr("onclick", "");
+    $('#page5 #option4').attr("onclick", "");
+    $('#page5 #option5').attr("onclick", "");
+    $('#page5 #option6').attr("onclick", "");
 }
 	
 /*
