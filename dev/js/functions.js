@@ -4,7 +4,7 @@ var oval = '';
 var nextOval = '';
 var interval;
 var ideaInterval;
-var duration = '500';
+var duration = '100';
 var num_picked;
 var answer_array_tourism = [
 "hotel and shopping weekend package deals",
@@ -13,7 +13,7 @@ var answer_array_tourism = [
 "treasure hunt to find architectural details on local buildings",
 "progressive dinner to highlight local items at different restaurants",
 "social media advertising to show regional specialties",
-"dinner train/riverboat dining experience featuring local foods",
+"bike and stay weekends with neighboring towns",
 "seasonal wine and meal pairings",
 "murals on town buildings displaying local attractions",
 "embedded directional signs in sidewalk to direct foot traffic to nearby attractions",
@@ -104,7 +104,7 @@ function next_click(){
 	}
 	else if(cur_div == "#page5")
 	{
-		setTimeout("ideaInterval = setInterval('animateIdeas()', duration)", duration);
+		setTimeout("ideaInterval = setInterval('animateIdeas()', 100)", duration);
 	}
 }
 
@@ -120,7 +120,7 @@ function back_click(){
 	}
 	else if(cur_div == "#page5")
 	{
-		ideaInterval = setInterval('animateIdeas()', duration);
+		ideaInterval = setInterval('animateIdeas()', 100);
 	}
 	$(cur_div).delay(duration);
 	$(cur_div).fadeIn(duration);
@@ -188,20 +188,34 @@ function oAnimate(){
 function animateIdeas(){
 	oval = $('#page5 div.option.current');
 	nextOval = oval.next('#page5 div.option');
+	var start = 5000;
+	var inc = 1500;
 	if(nextOval.length === 0){
 	    oval.removeClass('current');
 		clearInterval(ideaInterval);
 		setTimeout("$('#page5 .option').addClass('current')", 1);
 		setTimeout("$('#page5 .option').removeClass('current')", 1000);
 		setTimeout("$('#page5 .subOption').fadeIn(duration)", 2000);
-		setTimeout("makeClickable()", 1501);
 		setTimeout("$('#page5 #ideaCenter1').fadeIn(duration)", 2000);
-		setTimeout("$('#page5 #ideaCenter2').fadeIn(duration)", 3000);
+		setTimeout("$('#page5 #ideaCenter2').fadeIn(duration)", start);
+		setTimeout("swapIdea('#page5 #option2', '#page5 #option4')", start+=inc);
+		setTimeout("swapIdea('#page5 #option1', '#page5 #option3')", start+=inc);
+		setTimeout("swapIdea('#page5 #option2', '#page5 #option5')", start+=inc);
+		setTimeout("swapIdea('#page5 #option2', '#page5 #option6')", start+=inc);
+		setTimeout("swapIdea('#page5 #option1', '#page5 #option5')", start+=inc);
+		setTimeout("$('#page5 #ideaCenter3').fadeIn(duration)", start);
+		setTimeout("makeClickable()", start+=inc+1);
 	}	
 	oval.removeClass('current');
 	nextOval.addClass('current');
 }
 
+function swapIdea(idea1,idea2){
+	$(idea1).addClass('current');
+	$(idea2).addClass('current');
+	setTimeout("$(idea1).removeClass('current')", 1450);
+	setTimeout("$(idea2).removeClass('current')", 1450);
+}
 function makeClickable(){
     $('#page5 #option1').attr("onclick", "pick_two('#page5 #option1')");
     $('#page5 #option2').attr("onclick", "pick_two('#page5 #option2')");
