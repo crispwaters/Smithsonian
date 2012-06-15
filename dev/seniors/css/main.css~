@@ -1,0 +1,447 @@
+/******************************CSS RESET******************************/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i, dl, dt, dd, ol, ul, li, a,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+	-webkit-user-drag: none;
+}
+
+html {
+	background:#000;
+	overflow:hidden;
+	-webkit-user-select: none;
+	/*cursor:none;
+*/
+}
+body {
+	font:30px FrutigerLTStd-Black;
+}
+h1 {
+	font-size:50px;
+	color:#fff;
+	text-align:center;
+}
+h2 {
+	font-size:90px;
+	color:#000;
+	text-align:center;
+	color:#e51f25;
+}
+#page8 h2 {
+	font-size:70px;
+}
+
+a:link {
+border:0px;
+}
+
+/******************************Header******************************/
+#page1,#page2,#page3,#page4,#page5,#page6,#page7,#page8 {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	display:none;
+}
+#page3,#page5,#page7,#page8 {
+	background:url('../imgs/lines.png') no-repeat;
+	background-position:center;
+}
+.topBar1 {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	padding:5px;
+	background: #e51f25;
+}
+.topBar2 {
+	position:absolute;
+	top:70px;
+	left:0px;
+	width:100%;
+}
+
+/******************************startGreen/startYellow******************************/
+#ideaButtonHead {
+	position:absolute;
+	width:100%;
+	text-align:center;
+	left:0px;
+	top:300px;
+}
+.ideaOval {
+	position:absolute;
+	top:450px;
+	height:200px;
+	width:300px;
+	padding:50px;
+	border-radius:50%;
+	text-align:center;
+}
+.ideaOval h1 {
+	font-size:30px;
+	color:#000;
+}
+#idea1 {
+	left:200px;
+	background:#31b44b;
+}
+#idea2 {
+	left:650px;
+	background:#31b44b;
+}
+#idea3 h1 {
+	font-size:36px;
+}
+#idea3 {
+	padding-top:70px;
+	height:180px;
+	right:180px;
+	background:#faed3c;
+}
+/******************************startGreen/startYellow******************************/
+#startButtonHead {
+	position:absolute;
+	width:100%;
+	text-align:center;
+	left:0px;
+	bottom:600px;
+}
+#page8 #startButtonHead {
+	position:absolute;
+	width:100%;
+	text-align:center;
+	padding:20px 0px;
+	left:0px;
+	bottom:150px;
+	background:#000;
+}
+#startGreen,#startYellow {
+	position:absolute;
+	bottom:300px;
+	height:200px;
+	width:400px;
+	padding-top:50px;
+	text-align:center;
+	font-size:40px;
+	border-radius:50%;
+}
+#startGreen {
+	left:400px;
+	background:#31b44b;
+}
+#startYellow {
+	padding-top:40px;
+	right:400px;
+	background:#faed3c;
+}
+
+/******************************Yellow Center Info Oval******************************/
+#page5 #ideaCenter1,#page5 #ideaCenter2,#page5 #ideaCenter3,#page5 #ideaCenter4 {
+	position:absolute;
+	bottom:350px;
+	right:550px;
+	height:300px;
+	width:600px;
+	padding-top:50px;
+	text-align:center;
+	background:#faed3c;
+	border-radius:50%;
+	display:none;
+}
+#ideaCenter1 h1,#ideaCenter2 h1,#ideaCenter3 h1,#ideaCenter4 h1 {
+	color:#000;
+}
+.example h1 {
+	padding-top:20px;
+	font-size:40px;
+}
+.pick2 h1 {
+	padding-top:80px;
+}
+.yourTurn h1 {
+	font-size:60px;
+}
+#centerInfoYellow {
+	position:absolute;
+	bottom:350px;
+	right:550px;
+	height:300px;
+	width:600px;
+	padding-top:20px;
+	text-align:center;
+	background:#faed3c;
+	border-radius:50%;
+}
+#centerInfoYellow h1 {
+	color:#000;
+	font-size:55px;
+}
+#page2 #centerInfoYellow h1 {
+	font-size:65px;
+}
+#page2 #centerInfoYellow {
+	padding-top:30px;
+	height:280px;
+}
+#endBubble {
+	position:absolute;
+	top:250px;
+	left:410px;
+	height:450px;
+	width:850px;
+	padding-top:100px;
+	text-align:center;
+	background:#faed3c;
+	border-radius:50%;
+	z-index:100;
+}
+#endBubble h1 {
+	color:#000;
+	font-size:90px;
+}
+#page8 #endBubble h1 {
+	color:#000;
+	font-size:70px;
+}
+
+/******************************Web Layout******************************/
+.webCenterCircle {
+	position:absolute;
+	top:450px;
+	left:720px;
+	height:200px;
+	width:200px;
+	border-radius:50%;
+	background:#faed3c;
+	color:#000;
+	text-align:center;
+	font-size:170px;
+	display:none;
+}
+#webCenterOval {
+	position:absolute;
+	bottom:350px;
+	right:550px;
+	height:250px;
+	width:600px;
+	padding-top:100px;
+	text-align:center;
+	background:#faed3c;
+	border-radius:50%;
+}
+#webCenterOval h1 {
+	color:#000;
+	font-size:60px;
+}
+
+/********** Option Styling **********/
+.option {
+	position:absolute;
+	width:180px;
+	height:70px;
+	text-align:center;
+	padding-top:40px;
+	border-radius:50%;
+	background:#777;
+	display:none;
+	
+}
+#option1.current{
+	background:#e51f25;
+}
+#option2.current{
+	background:#0eabe0;
+}
+#option3.current{
+	background:#52ae42;
+}
+#option4.current{
+	background:#f89c3e;
+}
+#option5.current{
+	background:#8f53a2;
+}
+#option6.current{
+	background:#fec13f;
+}
+#page5 .option,#page7 .option,#page8 .option {
+	font-size:25px;
+}
+#page5 .mid,#page7 .mid,#page8 .mid {
+	padding-top:20px;
+	height:80px;
+}
+#page5 .tall,#page7 .tall,#page8 .tall {
+	padding-top:0px;
+	height:100px;
+}
+#option1 {
+	left:300px;
+	bottom:450px;
+}
+#option2 {
+	left:530px;
+	bottom:720px;
+}
+#option3 {
+	right:570px;
+	bottom:720px;
+}
+#option4 {
+	right:300px;
+	bottom:450px;
+}
+#option5 {
+	right:570px;
+	bottom:220px;
+}
+#option6 {
+	left:530px;
+	bottom:220px;
+}
+
+/********** Sub-Option Styling **********/
+.subOption {
+	position:absolute;
+	width:120px;
+	height:50px;
+	text-align:center;
+	padding-top:30px;
+	border-radius:50%;
+	background:#777;
+	display:none;
+}
+#page7 .subOption,#page8 .subOption {
+	display:block;
+}
+#page5 .subOption,#page7 .subOption,#page8 .subOption {
+	font-size:16px;
+}
+#page5 .subOption.mid,#page7 .subOption.mid,#page8 .subOption.mid {
+	padding-top:20px;
+	height:60px;
+}
+#page5 .subOption.tall,#page7 .subOption.tall,#page8 .subOption.tall {
+	padding-top:10px;
+	height:70px;
+}
+#option1Sub1 {
+	left:180px;
+	bottom:400px;
+}
+#option1Sub2 {
+	left:180px;
+	bottom:520px;
+}
+#option2Sub1 {
+	left:400px;
+	bottom:740px;
+}
+#option2Sub2 {
+	left:460px;
+	bottom:820px;
+}
+#option2Sub3 {
+	left:600px;
+	bottom:840px;
+}
+#option3Sub1 {
+	right:640px;
+	bottom:840px;
+}
+#option3Sub2 {
+	right:500px;
+	bottom:820px;
+}
+#option3Sub3 {
+	right:440px;
+	bottom:740px;
+}
+#option4Sub1 {
+	right:180px;
+	bottom:520px;
+}
+#option4Sub2 {
+	right:180px;
+	bottom:400px;
+}
+#option5Sub1 {
+	right:440px;
+	top:740px;
+}
+#option5Sub2 {
+	right:500px;
+	top:820px;
+}
+#option5Sub3 {
+	right:640px;
+	top:840px;
+}
+#option6Sub1 {
+	left:600px;
+	top:840px;
+}
+#option6Sub2 {
+	left:460px;
+	top:820px;
+}
+#option6Sub3 {
+	left:400px;
+	top:740px;
+}
+
+
+/******************************Navigation******************************/
+.start {
+	position:absolute;
+	bottom:50px;
+	left:50px;
+}
+.back {
+	position:absolute;
+	display:block;
+	bottom:50px;
+	right:250px;
+}		
+.next {
+	position:absolute;
+	display:block;
+	bottom:50px;
+	right:50px;
+}	
+.postIdea {
+	position:absolute;
+	right:80px;
+	bottom:30px;
+	height:110px;
+	width:150px;
+	border-radius:50%;
+	background:#52ae42;
+	text-align:center;
+	padding-top:40px;
+	display:none;
+}	
+.shortIdea {
+	font-size:40px;
+}
+.midIdea {
+	font-size:35px;
+}
+.tallIdea {
+}
+
+
+
