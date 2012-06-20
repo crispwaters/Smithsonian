@@ -30,7 +30,7 @@ handle_call(get_message, _, Queue) ->
     Empty = queue:is_empty(Queue),
     if
 	Empty ->
-	    {reply, "design transforms communities", Queue};
+	    {reply, "design transforms communities    design transforms communities    design transforms communities    design transforms communities", Queue};
 	true ->
 	    {reply, queue:get(Queue), Queue}
     end.
