@@ -55,7 +55,7 @@ border:0px;
 	display:none;
 }
 #page3,#page5,#page7,#page8 {
-	background:url('../imgs/lines.png') no-repeat;
+	background:url('../../imgs/lines.png') no-repeat;
 	background-position:center;
 }
 .topBar1 {

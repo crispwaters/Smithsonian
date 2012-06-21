@@ -60,6 +60,12 @@ $('.next1').click(function() {
 	}
 	return false;
 });
+$('.next2').click(function() {
+	if(!$(this).parent().parent().children().is(':animated')){
+		location.href='seniors/index.html'
+	}
+	return false;
+});
 
 $('.postIdea').click(function() {
 	if(!$(this).parent().parent().children().is(':animated')){
