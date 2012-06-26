@@ -20,7 +20,7 @@ p {
 	padding: 0px;
 	margin-left:0px;
 	margin-right:0px;
-	margin-top:0px;
+	margin-top:-1px;
 	margin-bottom:2px;
 	height: 14px;
 	font-size:14px;
@@ -44,16 +44,16 @@ marquee {
 </head>
 <body>
 <div class="ticker">
-<marquee id="s1" behavior="scroll" scrollamount="1" direction="left"><p id="t1">welcome to the college of design smithsonian demo!</p></marquee>
+<marquee id="s1" behavior="scroll" scrollamount="1" direction="left"><p id="t1">design transforms communities</p></marquee>
 </div>
 <div class="ticker">
-<marquee id="s2" behavior="scroll" scrollamount="1" direction="left"><p id="t2">welcome to the college of design smithsonian demo!</p></marquee>
+<marquee id="s2" behavior="scroll" scrollamount="1" direction="left"><p id="t2">design transforms communities</p></marquee>
 </div>
 <div class="ticker">
-<marquee id="s3" behavior="scroll" scrollamount="1" direction="left"><p id="t3">welcome to the college of design smithsonian demo!</p></marquee>
+<marquee id="s3" behavior="scroll" scrollamount="1" direction="left"><p id="t3">design transforms communities</p></marquee>
 </div>
 <div class="ticker">
-<marquee id="s4" behavior="scroll" scrollamount="1" direction="left"><p id="t4">welcome to the college of design smithsonian demo!</p></marquee>
+<marquee id="s4" behavior="scroll" scrollamount="1" direction="left"><p id="t4">design transforms communities</p></marquee>
 </div>
 <div id="video" class="video" style="margin-top:0px;margin-left:98px;">
 	<video id="vidcontent">
@@ -102,7 +102,7 @@ function newMsgCheck(){
 }
 
 
-function marqueeReset(data){
+/*function marqueeReset(data){
 	var i = 0;
 	var j = 0;
 	var lData = data.toLowerCase();
@@ -126,6 +126,59 @@ function marqueeReset(data){
 	timeoutS2 = setTimeout("$('#s2').show().marquee()",9040);
 	timeoutS3 = setTimeout("$('#s3').show().marquee()",18080);
 	timeoutS4 = setTimeout("$('#s4').show().marquee()",27120);
+}*/
+function marqueeReset(data){
+	var i = 0;
+	var j = 0;
+	var lData = data.toLowerCase();
+	curMsg = lData;
+	var dif;
+	/*total screen time stays the same, while time while nothing is on the screen is diminished */
+	if (lData.length <= 35)
+	{
+		dif = 35 - lData.length;
+		for (i = 0; i < dif; i++)
+		{
+			lData += "&nbsp;";
+		}
+	}
+	else if (lData.length <= 75)
+	{
+		dif = 75 - lData.length;
+		for (i = 0; i < dif; i++)
+		{
+			lData += "&nbsp;";
+		}
+	}
+	else if (lData.length <= 100)
+	{
+		dif = 100 - lData.length;
+		for (i = 0; i < dif; i++)
+		{
+			lData += "&nbsp;";
+		}
+	}
+	else
+	{
+		dif = 150 - lData.length;
+		for (i = 0; i < dif; i++)
+		{
+			lData += "&nbsp;";
+		}
+	}
+	$('.ticker > *').remove();
+	$('.ticker').each(function(index){
+		j+=1;
+		$(this).html('<marquee id="s' + j + '" behavior="scroll" scrollamount="1" direction="left"><p id="t' + j + '"></p></marquee>');
+		$('#s' + j).hide();
+		$('#t' + j).html(lData);
+	});
+	$('#s1').show().marquee();
+	$('#s3').show().marquee();
+	window.clearTimeout(timeoutS2);
+	window.clearTimeout(timeoutS4);
+	timeoutS2 = setTimeout("$('#s2').show().marquee()",9040);
+	timeoutS4 = setTimeout("$('#s4').show().marquee()",9040);
 }
 </script>
 </body>
